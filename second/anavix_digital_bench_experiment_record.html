@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "status-on-hold-bg": "#FEF3C7",
+          "surface": "#f8f9ff",
+          "on-error": "#ffffff",
+          "surface-container": "#e6eeff",
+          "error": "#ba1a1a",
+          "status-active": "#0284C7",
+          "surface-tint": "#515f7a",
+          "primary": "#000412",
+          "inverse-surface": "#233144",
+          "status-completed": "#059669",
+          "on-tertiary-fixed-variant": "#003ea8",
+          "on-secondary-fixed-variant": "#005049",
+          "inverse-on-surface": "#eaf1ff",
+          "on-tertiary": "#ffffff",
+          "audit-locked": "#334155",
+          "secondary": "#006a61",
+          "tertiary": "#000315",
+          "status-completed-bg": "#D1FAE5",
+          "status-planned-bg": "#F1F5F9",
+          "on-error-container": "#93000a",
+          "status-planned": "#64748B",
+          "outline-variant": "#c5c6ce",
+          "on-secondary": "#ffffff",
+          "safety-hazard": "#DC2626",
+          "surface-variant": "#d5e3fc",
+          "secondary-container": "#86f2e4",
+          "primary-fixed-dim": "#b8c7e6",
+          "secondary-fixed": "#89f5e7",
+          "surface-container-highest": "#d5e3fc",
+          "inverse-primary": "#b8c7e6",
+          "status-active-bg": "#E0F2FE",
+          "on-surface": "#0d1c2e",
+          "on-primary-fixed-variant": "#394761",
+          "surface-container-high": "#dce9ff",
+          "secondary-fixed-dim": "#6bd8cb",
+          "on-primary-container": "#7886a3",
+          "tertiary-container": "#001950",
+          "on-tertiary-container": "#4c7eff",
+          "on-secondary-container": "#006f66",
+          "on-surface-variant": "#44474d",
+          "on-primary-fixed": "#0c1b33",
+          "on-background": "#0d1c2e",
+          "error-container": "#ffdad6",
+          "status-on-hold": "#D97706",
+          "on-secondary-fixed": "#00201d",
+          "primary-container": "#0f1e36",
+          "tertiary-fixed-dim": "#b4c5ff",
+          "tertiary-fixed": "#dbe1ff",
+          "outline": "#75777e",
+          "background": "#f8f9ff",
+          "primary-fixed": "#d7e3ff",
+          "on-tertiary-fixed": "#00174b",
+          "bench-step-active": "#0D9488",
+          "surface-dim": "#ccdbf3",
+          "on-primary": "#ffffff",
+          "surface-container-lowest": "#ffffff",
+          "surface-bright": "#f8f9ff",
+          "surface-container-low": "#eff4ff"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+        },
+        "spacing": {
+          "space-sm": "0.5rem",
+          "space-xl": "1.5rem",
+          "space-3xl": "3rem",
+          "space-2xl": "2rem",
+          "space-2xs": "0.25rem",
+          "gutter-dense": "0.5rem",
+          "space-3xs": "0.125rem",
+          "margin-mobile": "1rem",
+          "space-xs": "0.375rem",
+          "margin": "1.5rem",
+          "gutter": "1rem",
+          "space-md": "0.75rem",
+          "space-lg": "1rem"
+        },
+        "fontFamily": {
+          "display-lg-mobile": [
+            "Hanken Grotesk"
+          ],
+          "label-md": [
+            "Inter"
+          ],
+          "body-lg": [
+            "Inter"
+          ],
+          "label-sm": [
+            "Inter"
+          ],
+          "headline-md": [
+            "Hanken Grotesk"
+          ],
+          "headline-sm": [
+            "Hanken Grotesk"
+          ],
+          "code-md": [
+            "JetBrains Mono"
+          ],
+          "body-sm": [
+            "Inter"
+          ],
+          "display-lg": [
+            "Hanken Grotesk"
+          ],
+          "headline-lg": [
+            "Hanken Grotesk"
+          ],
+          "body-md": [
+            "Inter"
+          ],
+          "code-sm": [
+            "JetBrains Mono"
+          ]
+        },
+        "fontSize": {
+          "display-lg-mobile": [
+            "28px",
+            {
+              "lineHeight": "36px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "700"
+            }
+          ],
+          "label-md": [
+            "13px",
+            {
+              "lineHeight": "18px",
+              "fontWeight": "500"
+            }
+          ],
+          "body-lg": [
+            "16px",
+            {
+              "lineHeight": "24px",
+              "fontWeight": "400"
+            }
+          ],
+          "label-sm": [
+            "11px",
+            {
+              "lineHeight": "14px",
+              "letterSpacing": "0.02em",
+              "fontWeight": "500"
+            }
+          ],
+          "headline-md": [
+            "22px",
+            {
+              "lineHeight": "30px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-sm": [
+            "18px",
+            {
+              "lineHeight": "24px",
+              "fontWeight": "600"
+            }
+          ],
+          "code-md": [
+            "13px",
+            {
+              "lineHeight": "18px",
+              "fontWeight": "500"
+            }
+          ],
+          "body-sm": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "fontWeight": "400"
+            }
+          ],
+          "display-lg": [
+            "36px",
+            {
+              "lineHeight": "44px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "700"
+            }
+          ],
+          "headline-lg": [
+            "28px",
+            {
+              "lineHeight": "36px",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-md": [
+            "14px",
+            {
+              "lineHeight": "20px",
+              "fontWeight": "400"
+            }
+          ],
+          "code-sm": [
+            "11px",
+            {
+              "lineHeight": "14px",
+              "fontWeight": "500"
+            }
+          ]
+        }
+      },
+    },
+  }</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-margin flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg min-w-0"><div class="flex items-center gap-space-xs shrink-0"><img alt="Anavix Brand Mark" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VkTRgrlQLkzAs5zDDTd4nw5iT-gUCifMgukmJS5bu-yzrLMwWBARLph0wenKCmEEXEY1slzLVJdp7zHiYHTPPh7-Wz-DCrHh8DRVljsb8Yjx5ooN2yOzIbOk_ILDBdZthMicmG1V7gzCs9Z9Xq1gz_NBAvR89VFHx8dURmb5cuY--gKdhcR5kRafdNIC20e07r3CWTsLKb7bHzCAOxIHGv1uunXG0aF33uRwvCbeo-UZk-EBYWNk-ckh0"/><span class="font-headline-sm text-headline-sm tracking-tight text-primary uppercase">Anavix</span><span class="font-code-sm text-code-sm px-space-xs py-space-3xs bg-surface-container text-on-surface rounded font-medium">ELN v4.2</span></div><div class="h-6 w-px bg-outline-variant/40 shrink-0 hidden md:block"></div><div class="hidden lg:flex items-center gap-space-xs shrink-0 bg-surface-container-lowest px-space-md py-space-2xs rounded shadow-[0_1px_4px_rgba(0,0,0,0.02)] cursor-pointer"><span class="material-symbols-outlined text-secondary text-[18px]">biotech</span><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-surface-variant leading-none">Active Project</span><span class="font-label-md text-label-md text-on-surface font-semibold max-w-[220px] truncate leading-tight">CRISPR-Cas9 Target Validation</span></div><span class="font-code-sm text-code-sm bg-status-active-bg text-status-active px-space-2xs rounded">EXP-4092</span><span class="material-symbols-outlined text-on-surface-variant text-[16px]">expand_more</span></div><div class="hidden xl:flex items-center gap-space-2xs font-body-sm text-body-sm text-on-surface-variant truncate"><span class="material-symbols-outlined text-[16px]">folder</span><span>Projects</span><span class="material-symbols-outlined text-[14px]">chevron_right</span><span>CRISPR-Cas9</span><span class="material-symbols-outlined text-[14px]">chevron_right</span><span class="text-on-surface font-medium truncate">Target Validation EXP-4092</span></div></div><div class="flex-1 max-w-md hidden md:block px-space-xs"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[18px]">search</span><input class="w-full bg-surface-container-low pl-9 pr-16 py-space-xs rounded font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant cursor-pointer focus:outline-none" placeholder="Search experiments, protocols, reagents..." readonly="" type="text"/><kbd class="absolute right-2 font-code-sm text-code-sm bg-surface-container-lowest px-space-xs py-space-3xs rounded text-on-surface-variant border border-outline-variant/30">⌘K</kbd></div></div><div class="flex items-center gap-space-md shrink-0"><div class="hidden lg:flex items-center gap-space-xs bg-surface-container-lowest px-space-sm py-space-2xs rounded shadow-[0_1px_4px_rgba(0,0,0,0.02)]"><span class="material-symbols-outlined text-bench-step-active text-[18px] animate-pulse">timer</span><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-surface-variant leading-none">Bench Timer</span><span class="font-code-md text-code-md text-on-surface leading-tight font-semibold">00:42:15</span></div><button class="material-symbols-outlined text-on-surface-variant hover:text-on-surface text-[16px] ml-space-2xs" type="button">pause</button></div><div class="hidden 2xl:flex items-center gap-space-2xs bg-surface-container-low px-space-xs py-space-3xs rounded font-code-sm text-code-sm"><span class="w-2 h-2 rounded-full bg-status-completed inline-block"></span><span class="text-on-surface-variant">Saved 14:32:08 UTC</span><span class="text-on-surface font-medium">· SHA-256</span></div><button aria-label="Toggle dark mode" class="p-space-xs rounded bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">light_mode</span></button><div class="h-6 w-px bg-outline-variant/40 hidden sm:block"></div><div class="hidden sm:flex flex-col text-right"><span class="font-label-md text-label-md text-on-surface font-semibold leading-tight">Dr. E. Vance</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-none">Lead Researcher · Bio-Lab 4</span></div><button aria-label="Notifications" class="p-space-xs rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors relative" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-safety-hazard"></span></button><button aria-label="Settings" class="p-space-xs rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">settings</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><aside class="fixed left-0 top-16 bottom-0 w-64 bg-surface-container-low z-40 flex flex-col justify-between py-space-md shadow-[0_1px_8px_rgba(0,0,0,0.02)] overflow-y-auto"><div class="flex flex-col gap-space-lg px-space-md"><div class="px-space-xs"><span class="font-label-sm text-label-sm text-on-surface-variant tracking-wider uppercase font-semibold">Scientific Workflows</span></div><nav class="flex flex-col gap-space-3xs" data-active-classes="bg-primary text-on-primary font-semibold"><a class="flex items-center justify-between px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="my-work" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">task_alt</span><span>My Work</span></div><span class="font-code-sm text-code-sm px-space-xs rounded bg-surface-container text-on-surface">4</span></a><a class="flex items-center justify-between px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="projects" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">folder_special</span><span>Projects</span></div><span class="font-code-sm text-code-sm px-space-xs rounded bg-surface-container text-on-surface">12</span></a><a class="flex items-center justify-between px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="protocol-library" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">menu_book</span><span>Protocol Library</span></div></a><a aria-current="page" class="flex items-center justify-between px-space-md py-space-xs rounded transition-all bg-primary text-on-primary font-semibold" data-path="digital-bench" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px] text-bench-step-active">science</span><span>Digital Bench</span></div><span class="font-label-sm text-label-sm px-space-xs rounded bg-status-active-bg text-status-active uppercase font-semibold">Live</span></a><a class="flex items-center justify-between px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="scientific-calculators" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">calculate</span><span>Calculators</span></div></a><a class="flex items-center justify-between px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="inventory-and-reagents" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">inventory_2</span><span>Inventory &amp; Reagents</span></div></a><a class="flex items-center justify-between px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="data-and-analysis" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">analytics</span><span>Data &amp; Analysis</span></div></a></nav></div><div class="px-space-md pt-space-md"><div class="bg-surface-container p-space-sm rounded flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">Telemetry</span><span class="w-2 h-2 rounded-full bg-status-completed inline-block"></span></div><div class="flex items-center gap-space-xs font-label-md text-label-md text-on-surface font-semibold"><span class="material-symbols-outlined text-[16px] text-secondary">thermostat</span><span>Lab Unit B</span></div><div class="font-code-sm text-code-sm text-on-surface-variant flex items-center justify-between"><span>21.4°C / 44% RH</span><span class="text-status-completed font-medium">Nominal</span></div></div></div></aside><div class="pl-64"><main class="w-full pt-16 bg-surface min-h-screen px-margin py-margin"><div class="flex flex-col w-full">
+<!-- Top Experiment Header & Meta Bar -->
+<div class="flex flex-col gap-space-md mb-space-lg">
+<!-- Breadcrumb & Status Pill -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-code-sm text-code-sm px-space-xs py-space-3xs bg-primary text-on-primary rounded font-semibold tracking-wide">EXP-4092</span>
+<span class="text-outline-variant">/</span>
+<span class="font-label-md text-label-md px-space-xs py-space-3xs bg-surface-container-high text-on-surface rounded">Project Cas9-Opt-2026</span>
+<span class="text-outline-variant">/</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">SOP-MOL-088 v2.4 (Locked Protocol)</span>
+<span class="inline-flex items-center gap-space-3xs text-audit-locked text-[12px] ml-space-2xs">
+<span class="material-symbols-outlined text-[14px]">lock</span> Regulatory Preserved
+        </span>
+</div>
+<div class="flex items-center gap-space-xs">
+<div class="inline-flex items-center gap-space-2xs px-space-sm py-space-3xs bg-status-active-bg text-status-active rounded-full shadow-sm">
+<span class="w-2 h-2 rounded-full bg-status-active animate-ping"></span>
+<span class="font-label-sm text-label-sm font-semibold uppercase tracking-wider">Active · In Execution</span>
+</div>
+<div class="inline-flex items-center gap-space-3xs px-space-xs py-space-3xs bg-surface-container text-on-surface-variant rounded font-code-sm text-code-sm">
+<span class="material-symbols-outlined text-[14px] text-secondary">cloud_done</span>
+<span>Hash SHA-256 Validated</span>
+</div>
+</div>
+</div>
+<!-- Title & Experiment Hero Grid -->
+<div class="flex flex-col xl:flex-row items-start xl:items-center justify-between gap-space-md bg-surface-container-lowest p-space-lg rounded shadow-sm">
+<div class="flex flex-col gap-space-3xs min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">Active Assay Workspace</span>
+<span class="text-outline-variant">·</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Created 28 Feb 2026 11:20 UTC by Dr. E. Vance</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight font-bold">
+          High-Fidelity CRISPR-Cas9 Ribonucleoprotein (RNP) Cleavage Assay
+        </h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-4xl">
+          Quantitative cleavage kinetic analysis targeting the EMX1 exon-3 genomic locus using engineered HiFi Cas9 variant complexed with synthetic dual-labeled fluorogenic substrate sgRNA-48.
+        </p>
+</div>
+<!-- Action Buttons Bar -->
+<div class="flex flex-wrap items-center gap-space-xs shrink-0 w-full xl:w-auto pt-space-xs xl:pt-0">
+<button class="inline-flex items-center gap-space-2xs px-space-md py-space-sm bg-error-container text-on-error-container hover:bg-error/20 transition-colors rounded text-label-md font-label-md font-semibold" type="button">
+<span class="material-symbols-outlined text-[18px]">report_problem</span>
+          Record Deviation
+        </button>
+<button class="inline-flex items-center gap-space-2xs px-space-md py-space-sm bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors rounded text-label-md font-label-md font-medium" type="button">
+<span class="material-symbols-outlined text-[18px]">table_rows</span>
+          Add Table
+        </button>
+<button class="inline-flex items-center gap-space-2xs px-space-md py-space-sm bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors rounded text-label-md font-label-md font-medium" type="button">
+<span class="material-symbols-outlined text-[18px]">show_chart</span>
+          Spectrometry Plot
+        </button>
+<button class="inline-flex items-center gap-space-2xs px-space-md py-space-sm bg-surface-container-high hover:bg-surface-container-highest text-on-surface transition-colors rounded text-label-md font-label-md font-medium" type="button">
+<span class="material-symbols-outlined text-[18px]">fact_check</span>
+          Request Review
+        </button>
+<button class="inline-flex items-center gap-space-2xs px-space-lg py-space-sm bg-primary hover:bg-primary-container text-on-primary transition-all rounded text-label-md font-label-md font-semibold shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">download_for_offline</span>
+          Export Archive
+        </button>
+</div>
+</div>
+</div>
+<!-- Persistent Active Bench Telemetry & Step Timer Bar (Glove-touch friendly) -->
+<div class="sticky top-16 z-30 mb-space-lg bg-surface-container-highest/95 backdrop-blur-md rounded shadow-md p-space-sm">
+<div class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-space-md">
+<!-- Current Bench Phase Monitor -->
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-10 h-10 rounded bg-bench-step-active flex items-center justify-center text-on-primary shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[24px]">heat_pump</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-code-sm text-code-sm font-semibold text-bench-step-active uppercase tracking-wider">Step 2.3 · Bench In-Progress</span>
+<span class="text-outline-variant">·</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Eppendorf ThermoMixer C · Block #3</span>
+</div>
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface truncate">
+            Incubation: Target Cleavage Induction at 37.0°C (±0.2°C)
+          </span>
+</div>
+</div>
+<!-- Tactile Timer Controls -->
+<div class="flex flex-wrap items-center gap-space-sm shrink-0 bg-surface-container-lowest p-space-2xs rounded shadow-sm">
+<div class="flex items-center gap-space-xs px-space-sm">
+<span class="material-symbols-outlined text-bench-step-active text-[20px] animate-pulse">timer</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Time Remaining</span>
+<span class="font-code-md text-headline-sm font-bold text-on-surface tracking-tight" id="bench-countdown">00:14:28</span>
+</div>
+</div>
+<div class="h-8 w-px bg-surface-container-high hidden sm:block"></div>
+<div class="flex items-center gap-space-2xs">
+<button class="h-10 px-space-md bg-bench-step-active hover:bg-secondary text-on-primary rounded font-label-md text-label-md font-semibold transition-colors flex items-center gap-space-2xs" id="timer-toggle-btn" type="button">
+<span class="material-symbols-outlined text-[18px]" id="timer-toggle-icon">pause</span>
+<span id="timer-toggle-text">Pause</span>
+</button>
+<button class="h-10 px-space-sm bg-surface-container hover:bg-surface-container-high text-on-surface rounded font-label-md text-label-md transition-colors flex items-center gap-space-2xs" id="timer-reset-btn" type="button">
+<span class="material-symbols-outlined text-[18px]">restart_alt</span>
+<span>Reset</span>
+</button>
+<button class="h-10 px-space-sm bg-surface-container-high hover:bg-surface-container-highest text-on-surface rounded font-code-sm text-code-sm font-semibold transition-colors flex items-center gap-space-3xs" id="timer-add-btn" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+<span>5 min</span>
+</button>
+</div>
+<div class="h-8 w-px bg-surface-container-high hidden md:block"></div>
+<!-- Mode Toggle Pill -->
+<div class="flex items-center gap-space-3xs bg-surface-container p-space-3xs rounded">
+<button class="px-space-xs py-space-3xs rounded bg-surface-container-lowest text-on-surface font-label-sm text-label-sm font-semibold shadow-sm flex items-center gap-space-3xs" type="button">
+<span class="material-symbols-outlined text-[14px]">touch_app</span> Touch-Bench
+          </button>
+<button class="px-space-xs py-space-3xs rounded text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-colors flex items-center gap-space-3xs" type="button">
+<span class="material-symbols-outlined text-[14px]">desktop_windows</span> Analyst
+          </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Dual-Column Scientist Ergonomic Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT 60% (Col 7/12 desktop): Active Protocol Step Execution Tree -->
+<section class="lg:col-span-7 flex flex-col gap-space-lg">
+<!-- Execution Breadcrumbs / Section Anchor -->
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface">Digital Bench Checklist</span>
+<span class="font-code-sm text-code-sm px-space-xs py-space-3xs rounded bg-status-active-bg text-status-active font-semibold">Step 2 of 4 Active</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span>Bench Auto-advance</span>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-container-high peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface peer-checked:bg-bench-step-active after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:rounded-full after:h-4 after:w-4 after:transition-all"></div>
+</label>
+</div>
+</div>
+<!-- Phase 1: Completed Section -->
+<div class="flex flex-col bg-surface-container-low rounded p-space-md opacity-90 transition-all hover:opacity-100">
+<div class="flex items-start justify-between gap-space-md mb-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-6 h-6 rounded-full bg-status-completed text-on-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase font-semibold text-on-surface-variant">Protocol Phase 01</span>
+<h2 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Reagent Preparation &amp; Precise Thawing</h2>
+</div>
+</div>
+<span class="font-code-sm text-code-sm text-on-surface-variant bg-surface-container px-space-xs py-space-3xs rounded">13:45 UTC · Operator: Dr. EV</span>
+</div>
+<div class="flex flex-col gap-space-xs pl-space-xl">
+<div class="flex items-center justify-between py-space-2xs">
+<span class="font-body-md text-body-md text-on-surface-variant line-through">1.1 Equilibrate 10X NEB Cas9 Reaction Buffer to 22.0°C. Vortex vigorously for 15s.</span>
+<span class="font-code-sm text-code-sm text-status-completed flex items-center gap-space-3xs font-medium">
+<span class="material-symbols-outlined text-[14px]">done_all</span> Verified
+            </span>
+</div>
+<div class="flex items-center justify-between py-space-2xs">
+<span class="font-body-md text-body-md text-on-surface-variant line-through">1.2 Reconstitute synthetic sgRNA at 20 µM in 1X Nuclease-Free IDTE Solution.</span>
+<span class="font-code-sm text-code-sm text-status-completed flex items-center gap-space-3xs font-medium">
+<span class="material-symbols-outlined text-[14px]">done_all</span> Verified
+            </span>
+</div>
+<div class="flex items-center justify-between py-space-2xs">
+<span class="font-body-md text-body-md text-on-surface-variant line-through">1.3 Prepare pre-chilled 0.2 mL 8-tube PCR strips in chilled metal bath Block Alpha.</span>
+<span class="font-code-sm text-code-sm text-status-completed flex items-center gap-space-3xs font-medium">
+<span class="material-symbols-outlined text-[14px]">done_all</span> Verified
+            </span>
+</div>
+</div>
+</div>
+<!-- Phase 2: CURRENT ACTIVE PHASE (Elevated, high-contrast, tactile) -->
+<div class="flex flex-col bg-surface-container-lowest rounded-xl shadow-md p-space-lg relative overflow-hidden">
+<!-- Teal Active Accent Marker -->
+<div class="absolute left-0 top-0 bottom-0 w-2 bg-bench-step-active"></div>
+<div class="flex items-center justify-between pb-space-sm pl-space-xs">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-status-active-bg text-bench-step-active flex items-center justify-center font-bold font-code-md">
+              02
+            </div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase font-bold text-bench-step-active tracking-wider">Active Execution Phase</span>
+<h2 class="font-headline-md text-headline-md font-bold text-on-surface">Reaction Assembly &amp; Complexation</h2>
+</div>
+</div>
+<span class="font-code-sm text-code-sm px-space-xs py-space-3xs bg-status-active-bg text-status-active rounded font-semibold">
+            Standard Run #CRISPR-4092-B
+          </span>
+</div>
+<!-- Safety Hazard Pill Alert -->
+<div class="my-space-sm p-space-sm bg-error-container/40 rounded flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-safety-hazard text-[22px] shrink-0 mt-0.5">warning</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-error-container uppercase tracking-wide">Precautionary SOP Mandate</span>
+<span class="font-body-sm text-body-sm text-on-surface">
+              Wear clean cryogenic nitriles. Prevent rapid Cas9 thermal enzyme degradation — hold working reagent block continuously at ≤ 4.0°C. Never vortex enzyme post-dilution.
+            </span>
+</div>
+</div>
+<!-- Step List inside Active Phase -->
+<div class="flex flex-col gap-space-md pl-space-xs mt-space-sm">
+<!-- Step 2.1 (Checked) -->
+<div class="flex items-start gap-space-sm p-space-sm bg-surface-container-low rounded">
+<input checked="" class="w-5 h-5 rounded text-bench-step-active focus:ring-0 mt-1 cursor-pointer" id="step-2-1" type="checkbox"/>
+<div class="flex flex-col flex-1">
+<label class="font-body-md text-body-md font-semibold text-on-surface cursor-pointer" for="step-2-1">
+                Step 2.1: Dispense 10.0 µL of 10X Cas9 Nuclease Reaction Buffer into microcentrifuge tube on ice.
+              </label>
+<div class="flex items-center gap-space-md mt-space-2xs text-on-surface-variant font-code-sm text-code-sm">
+<span>Vol: 10.0 µL</span>
+<span>·</span>
+<span>Lot: NEB-BUF-9844</span>
+<span>·</span>
+<span class="text-status-completed font-medium">Logged 13:58:12 UTC</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-status-completed text-[20px]">check_circle</span>
+</div>
+<!-- Step 2.2 (In-Focus with Embedded Molarity Inline Math) -->
+<div class="flex flex-col p-space-md bg-surface-container-lowest rounded-xl shadow-sm">
+<div class="flex items-start gap-space-sm">
+<input class="w-5 h-5 rounded text-bench-step-active focus:ring-0 mt-1 cursor-pointer" id="step-2-2" type="checkbox"/>
+<div class="flex flex-col flex-1">
+<label class="font-headline-sm text-headline-sm font-bold text-on-surface cursor-pointer" for="step-2-2">
+                  Step 2.2: Dilute Cas9 Nuclease to 1.0 µM using Diluent Buffer. Add 1.5 µL to reaction mixture.
+                </label>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-3xs">
+                  Prepare master ribonucleoprotein complex with sgRNA at a 1:1.2 molar ratio. Mix by gentle pipetting 8 times.
+                </p>
+</div>
+<span class="font-label-sm text-label-sm px-space-xs py-space-3xs bg-status-active-bg text-status-active rounded font-semibold uppercase">Executing</span>
+</div>
+<!-- Inline Molarity Formula Micro-Card -->
+<div class="mt-space-md p-space-md bg-surface-container rounded">
+<div class="flex flex-wrap items-center justify-between gap-space-xs mb-space-xs">
+<span class="font-label-sm text-label-sm font-semibold uppercase tracking-wider text-on-surface">
+                  Inline Working Dilution Verification
+                </span>
+<span class="font-code-sm text-code-sm text-secondary font-semibold">Formula: M₁ · V₁ = M₂ · V₂</span>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-sm">
+<div class="flex flex-col bg-surface-container-lowest p-space-xs rounded">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Stock Conc (M₁)</span>
+<span class="font-code-md text-code-md font-bold text-on-surface">20.0 µM</span>
+</div>
+<div class="flex flex-col bg-surface-container-lowest p-space-xs rounded">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Target Conc (M₂)</span>
+<span class="font-code-md text-code-md font-bold text-on-surface">1.0 µM</span>
+</div>
+<div class="flex flex-col bg-surface-container-lowest p-space-xs rounded">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Stock Cas9 Vol (V₁)</span>
+<span class="font-code-md text-code-md font-bold text-secondary">0.75 µL</span>
+</div>
+<div class="flex flex-col bg-surface-container-lowest p-space-xs rounded">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Diluent Buffer (V₂)</span>
+<span class="font-code-md text-code-md font-bold text-on-surface">14.25 µL</span>
+</div>
+</div>
+</div>
+<!-- Real-time Bench Touch Actions -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm mt-space-md pt-space-xs">
+<div class="flex items-center gap-space-xs">
+<button class="h-10 px-space-md bg-primary text-on-primary hover:bg-primary-container rounded font-label-md text-label-md font-semibold transition-all shadow-sm flex items-center gap-space-2xs" type="button">
+<span class="material-symbols-outlined text-[18px]">done</span>
+<span>Confirm Step Completion</span>
+</button>
+<button class="h-10 px-space-sm bg-surface-container text-on-surface hover:bg-surface-container-high rounded font-label-md text-label-md transition-colors flex items-center gap-space-2xs" type="button">
+<span class="material-symbols-outlined text-[18px]">photo_camera</span>
+<span>Attach Pipette Photo</span>
+</button>
+</div>
+<span class="font-code-sm text-code-sm text-on-surface-variant">Target Well Plate: Strip A1-H1</span>
+</div>
+</div>
+<!-- Logged Deviation Callout Card -->
+<div class="p-space-sm bg-status-on-hold-bg/70 rounded flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-status-on-hold text-[20px] shrink-0 mt-0.5">verified_user</span>
+<div class="flex flex-col flex-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-status-on-hold uppercase tracking-wide">
+                  Regulatory Deviation Note Logged (#DEV-4092-01)
+                </span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">14:02 UTC</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface mt-space-3xs">
+                Deviation logged: Reagent lot <span class="font-code-sm text-code-sm font-semibold">#CAS9-992B</span> substituted for depleted lot <span class="font-code-sm text-code-sm font-semibold">#CAS9-980</span>. Pre-authorized by lab supervisor Dr. M. Miller via Anavix FastSign.
+              </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Phase 3: Upcoming Steps Preview -->
+<div class="flex flex-col bg-surface-container-low rounded p-space-md">
+<div class="flex items-start justify-between gap-space-md mb-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-6 h-6 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center font-code-sm text-code-sm font-bold shrink-0">
+              03
+            </div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase font-semibold text-on-surface-variant">Protocol Phase 03</span>
+<h2 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Thermocycler Incubation &amp; Gel Quench</h2>
+</div>
+</div>
+<span class="font-code-sm text-code-sm text-on-surface-variant bg-surface-container px-space-xs py-space-3xs rounded">Estimated 22 min remaining</span>
+</div>
+<div class="flex flex-col gap-space-xs pl-space-xl text-on-surface-variant">
+<div class="flex items-center justify-between py-space-2xs">
+<span class="font-body-md text-body-md">3.1 Transfer reaction strip to Applied Biosystems ProFlex 96-well thermocycler.</span>
+<span class="font-code-sm text-code-sm">Queue Block 2</span>
+</div>
+<div class="flex items-center justify-between py-space-2xs">
+<span class="font-body-md text-body-md">3.2 Incubate at 37°C for 15 minutes, followed by heat denaturation at 65°C for 10 minutes.</span>
+<span class="font-code-sm text-code-sm">Thermal Profile: CLEAVE_V4</span>
+</div>
+<div class="flex items-center justify-between py-space-2xs">
+<span class="font-body-md text-body-md">3.3 Add 1 µL of Proteinase K (20 mg/mL); incubate at 56°C for 10 minutes to release target fragments.</span>
+<span class="font-code-sm text-code-sm">Pending 3.2</span>
+</div>
+</div>
+</div>
+<!-- Laboratory Observation Rich Media Preview -->
+<div class="flex flex-col bg-surface-container-lowest rounded p-space-md shadow-sm gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">biotech</span>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Substrate Verification &amp; Instrument Capture</h3>
+</div>
+<span class="font-code-sm text-code-sm text-on-surface-variant">Capillary Electropherogram Live Stream</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md pt-space-xs">
+<div class="flex flex-col gap-space-2xs">
+<div class="relative w-full h-44 rounded overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="High resolution laboratory capillary gel electrophoresis analysis screen showing distinct DNA fluorescence peaks in blue and violet with crisp analytical baselines on clean dark slate diagnostic monitor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHja7IerlnO8jBHnwa7HpazvkRUjwoN3fLL9W4qDduL1NumzSaHrNRhE_8zrCKmFzsiwtLfmBhsW88zq1-_wsdbb8DGXxDFrkfEHE6pbVTXxJpGZZ209yAIQhT9slbdFm8unfauhWqTvpfXW6eeqz8l6FBBdnC9KD_nLrX1IH6N45O2e4ejqLHsFMWsL34OqKGbaO8xfl2nGw7k9dMGFnkFdvzl6yGybCuwpHJBCIbF1sgFwFG1alQ"/>
+<div class="absolute bottom-2 left-2 bg-primary/80 backdrop-blur text-on-primary font-code-sm text-code-sm px-space-xs py-space-3xs rounded">
+                Capillary Run: EMX1_Target_Control.fsa
+              </div>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Automated fragment sizing: 812 bp wildtype intact duplex reference.</span>
+</div>
+<div class="flex flex-col gap-space-2xs">
+<div class="relative w-full h-44 rounded overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Close up shot of scientific 96 well microplate with fluorescent rhodamine labeled cleavage assay solutions under specialized blue LED transilluminator in sterile laminar flow bench" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXYPhNPeMwJdG6v3BQ-tFPTQLaGDjjPf6ir8E-Jm9Wq63r3P6WIr1Qoj36O-IspjOou69EJgQw3ofFCGRZzPJscJQyTrHBOIV4Hw4k0LQQx1epAtZD7PGkbr0qFHOumP1dmgyE-PJnzYVcmd2rBYKQGk08mWbDjFzbrsr1a7rRrNIexcmrT9aO8XXxJE7WVe2mgToUaJo3sBFdrxUZeVFLvGH521T3CGqcvgHR3xHCzLZYLrWpXJ0F"/>
+<div class="absolute bottom-2 left-2 bg-primary/80 backdrop-blur text-on-primary font-code-sm text-code-sm px-space-xs py-space-3xs rounded">
+                Fluorescence Assay Plate #CR-4092
+              </div>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Well excitation check: Peak emission 520 nm (FAM reporter channel).</span>
+</div>
+</div>
+</div>
+</section>
+<!-- RIGHT 40% (Col 5/12 desktop): Tabular Data Entry, Calculations & Audit Trail -->
+<aside class="lg:col-span-5 flex flex-col gap-space-lg">
+<!-- 1. Real-time Cleavage Yield Data Table Widget -->
+<div class="flex flex-col bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<div class="flex items-center justify-between p-space-md bg-surface-container-low">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">table_chart</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface">Cleavage Yield Log</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">Microplate Reader: BioTek Synergy Neo2</span>
+</div>
+</div>
+<button class="inline-flex items-center gap-space-3xs text-secondary hover:text-bench-step-active font-label-sm text-label-sm font-semibold" type="button">
+<span class="material-symbols-outlined text-[16px]">add_box</span> Add Row
+          </button>
+</div>
+<!-- Dense Data Entry Matrix -->
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead class="bg-surface-container font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">
+<tr>
+<th class="py-space-xs px-space-sm font-semibold">Well</th>
+<th class="py-space-xs px-space-xs text-right font-semibold">Substrate</th>
+<th class="py-space-xs px-space-xs text-right font-semibold">Time</th>
+<th class="py-space-xs px-space-xs text-right font-semibold">Fluoresc.</th>
+<th class="py-space-xs px-space-xs text-right font-semibold">% Cleave</th>
+<th class="py-space-xs px-space-sm text-center font-semibold">Trend</th>
+</tr>
+</thead>
+<tbody class="font-code-sm text-code-sm divide-y-0">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-space-xs px-space-sm font-bold text-on-surface">A01</td>
+<td class="py-space-xs px-space-xs text-right text-on-surface-variant">10.0 nM</td>
+<td class="py-space-xs px-space-xs text-right text-on-surface-variant">0.0 m</td>
+<td class="py-space-xs px-space-xs text-right">
+<input class="w-16 bg-surface-container-low px-space-2xs py-space-3xs rounded text-right text-on-surface focus:outline-none focus:bg-surface-container" type="text" value="1,420"/>
+</td>
+<td class="py-space-xs px-space-xs text-right font-bold text-on-surface">3.2%</td>
+<td class="py-space-xs px-space-sm">
+<div class="w-12 h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-status-active" style="width: 8%"></div>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="bg-surface-container-low/50 hover:bg-surface-container-low transition-colors">
+<td class="py-space-xs px-space-sm font-bold text-on-surface">A02</td>
+<td class="py-space-xs px-space-xs text-right text-on-surface-variant">25.0 nM</td>
+<td class="py-space-xs px-space-xs text-right text-on-surface-variant">5.0 m</td>
+<td class="py-space-xs px-space-xs text-right">
+<input class="w-16 bg-surface-container-low px-space-2xs py-space-3xs rounded text-right text-on-surface focus:outline-none focus:bg-surface-container" type="text" value="4,890"/>
+</td>
+<td class="py-space-xs px-space-xs text-right font-bold text-on-surface">24.8%</td>
+<td class="py-space-xs px-space-sm">
+<div class="w-12 h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-bench-step-active" style="width: 25%"></div>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-space-xs px-space-sm font-bold text-on-surface">A03</td>
+<td class="py-space-xs px-space-xs text-right text-on-surface-variant">50.0 nM</td>
+<td class="py-space-xs px-space-xs text-right text-on-surface-variant">10.0 m</td>
+<td class="py-space-xs px-space-xs text-right">
+<input class="w-16 bg-surface-container-low px-space-2xs py-space-3xs rounded text-right text-on-surface focus:outline-none focus:bg-surface-container" type="text" value="12,340"/>
+</td>
+<td class="py-space-xs px-space-xs text-right font-bold text-on-surface">62.1%</td>
+<td class="py-space-xs px-space-sm">
+<div class="w-12 h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-bench-step-active" style="width: 62%"></div>
+</div>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="bg-surface-container-low/50 hover:bg-surface-container-low transition-colors">
+<td class="py-space-xs px-space-sm font-bold text-on-surface">A04</td>
+<td class="py-space-xs px-space-xs text-right text-on-surface-variant">100.0 nM</td>
+<td class="py-space-xs px-space-xs text-right text-on-surface-variant">15.0 m</td>
+<td class="py-space-xs px-space-xs text-right">
+<input class="w-16 bg-surface-container-low px-space-2xs py-space-3xs rounded text-right text-on-surface focus:outline-none focus:bg-surface-container" type="text" value="18,920"/>
+</td>
+<td class="py-space-xs px-space-xs text-right font-bold text-status-completed">94.7%</td>
+<td class="py-space-xs px-space-sm">
+<div class="w-12 h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-status-completed" style="width: 95%"></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer Metadata & Quick Analysis Vector -->
+<div class="p-space-sm bg-surface-container-low flex flex-col gap-space-2xs">
+<div class="flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant">
+<span>Regression Model: Michaelis-Menten (k_cat/K_m)</span>
+<span class="font-code-sm text-code-sm font-bold text-secondary">R² = 0.9942</span>
+</div>
+<!-- Inline Sparkline SVG Visualization -->
+<div class="w-full h-12 bg-surface-container-lowest rounded flex items-center px-space-sm">
+<svg class="w-full h-8 text-bench-step-active" fill="none" preserveaspectratio="none" viewbox="0 0 300 40">
+<path d="M 0 36 Q 40 34 80 26 T 160 14 T 240 6 L 300 4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2.5"></path>
+<path d="M 0 36 Q 40 34 80 26 T 160 14 T 240 6 L 300 4 L 300 40 L 0 40 Z" fill="currentColor" fill-opacity="0.12"></path>
+<circle class="fill-current text-bench-step-active" cx="80" cy="26" r="3"></circle>
+<circle class="fill-current text-bench-step-active" cx="160" cy="14" r="3"></circle>
+<circle class="fill-current text-bench-step-active" cx="240" cy="6" r="3"></circle>
+</svg>
+</div>
+</div>
+</div>
+<!-- 2. Scientific Quick Tools & Dilution Calculator Flyout -->
+<div class="flex flex-col bg-surface-container-lowest rounded-xl shadow-sm p-space-md">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">calculate</span>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Bench Fast-Tools</h3>
+</div>
+<span class="font-code-sm text-code-sm text-status-completed font-semibold flex items-center gap-space-3xs">
+<span class="w-2 h-2 rounded-full bg-status-completed"></span> Ready
+          </span>
+</div>
+<!-- Calculator Tabs -->
+<div class="flex items-center gap-space-2xs bg-surface-container p-space-3xs rounded mb-space-md">
+<button class="flex-1 py-space-xs px-space-xs text-center font-label-sm text-label-sm font-semibold rounded bg-surface-container-lowest text-on-surface shadow-sm" id="calc-tab-dilution" type="button">
+            Dilution (C₁V₁)
+          </button>
+<button class="flex-1 py-space-xs px-space-xs text-center font-label-sm text-label-sm font-medium rounded text-on-surface-variant hover:text-on-surface" id="calc-tab-density" type="button">
+            Mass &amp; MW
+          </button>
+<button class="flex-1 py-space-xs px-space-xs text-center font-label-sm text-label-sm font-medium rounded text-on-surface-variant hover:text-on-surface" id="calc-tab-unit" type="button">
+            Unit Conv
+          </button>
+</div>
+<!-- Active Calculator Panel -->
+<div class="flex flex-col gap-space-sm">
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="flex flex-col">
+<label class="font-label-sm text-label-sm text-on-surface-variant mb-space-3xs">Stock Concentration (C₁)</label>
+<div class="relative flex items-center">
+<input class="w-full bg-surface-container-low font-code-md text-code-md py-space-xs pl-space-sm pr-12 rounded focus:outline-none focus:bg-surface-container text-on-surface font-semibold" id="input-c1" step="any" type="number" value="20"/>
+<span class="absolute right-2 font-code-sm text-code-sm text-on-surface-variant">µM</span>
+</div>
+</div>
+<div class="flex flex-col">
+<label class="font-label-sm text-label-sm text-on-surface-variant mb-space-3xs">Desired Concentration (C₂)</label>
+<div class="relative flex items-center">
+<input class="w-full bg-surface-container-low font-code-md text-code-md py-space-xs pl-space-sm pr-12 rounded focus:outline-none focus:bg-surface-container text-on-surface font-semibold" id="input-c2" step="any" type="number" value="1.5"/>
+<span class="absolute right-2 font-code-sm text-code-sm text-on-surface-variant">µM</span>
+</div>
+</div>
+<div class="flex flex-col">
+<label class="font-label-sm text-label-sm text-on-surface-variant mb-space-3xs">Final Volume (V₂)</label>
+<div class="relative flex items-center">
+<input class="w-full bg-surface-container-low font-code-md text-code-md py-space-xs pl-space-sm pr-12 rounded focus:outline-none focus:bg-surface-container text-on-surface font-semibold" id="input-v2" step="any" type="number" value="50"/>
+<span class="absolute right-2 font-code-sm text-code-sm text-on-surface-variant">µL</span>
+</div>
+</div>
+<div class="flex flex-col">
+<label class="font-label-sm text-label-sm text-on-surface-variant mb-space-3xs">Calculated Stock Vol (V₁)</label>
+<div class="flex items-center h-[38px] px-space-sm bg-status-active-bg rounded">
+<span class="font-code-md text-code-md font-bold text-status-active" id="output-v1">3.75</span>
+<span class="font-code-sm text-code-sm text-status-active ml-auto font-medium">µL</span>
+</div>
+</div>
+</div>
+<!-- Dynamic Buffer Recommendation Callout -->
+<div class="p-space-xs bg-surface-container rounded flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant">
+<span>Buffer Diluent Volume:</span>
+<span class="font-code-md text-code-md font-bold text-on-surface" id="buffer-diff">46.25 µL</span>
+</div>
+<button class="w-full py-space-xs bg-secondary-container text-on-secondary-container hover:bg-secondary-fixed transition-colors rounded font-label-md text-label-md font-semibold flex items-center justify-center gap-space-2xs" id="calc-stamp-btn" type="button">
+<span class="material-symbols-outlined text-[16px]">draw</span>
+            Stamp Calculated Volumes to Step 2.2
+          </button>
+</div>
+</div>
+<!-- 3. Audit Trail, 21 CFR Part 11 Integrity & Supervisor Routing -->
+<div class="flex flex-col bg-surface-container-lowest rounded-xl shadow-sm p-space-md gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">policy</span>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Regulatory Compliance &amp; Chain of Custody</h3>
+</div>
+<span class="material-symbols-outlined text-status-completed text-[18px]">verified</span>
+</div>
+<div class="flex flex-col gap-space-xs font-code-sm text-code-sm">
+<div class="flex items-center justify-between py-space-3xs bg-surface-container-low px-space-xs rounded">
+<span class="text-on-surface-variant">Cryptographic Fingerprint:</span>
+<span class="font-bold text-on-surface">#e9a28bf0...948f</span>
+</div>
+<div class="flex items-center justify-between py-space-3xs bg-surface-container-low px-space-xs rounded">
+<span class="text-on-surface-variant">Cloud Immutable Storage:</span>
+<span class="text-on-surface">Frankfurt Tier-4 Vault (Write-Once)</span>
+</div>
+<div class="flex items-center justify-between py-space-3xs bg-surface-container-low px-space-xs rounded">
+<span class="text-on-surface-variant">Supervisor Co-Signer:</span>
+<span class="text-on-surface font-semibold">Dr. R. Chen (Pending Review)</span>
+</div>
+<div class="flex items-center justify-between py-space-3xs bg-surface-container-low px-space-xs rounded">
+<span class="text-on-surface-variant">21 CFR Part 11 Compliant:</span>
+<span class="text-status-completed font-semibold">Full Audit-Trail Enabled</span>
+</div>
+</div>
+<!-- Quick Sign Action -->
+<div class="mt-space-xs pt-space-xs flex items-center justify-between">
+<div class="flex items-center gap-space-2xs">
+<div class="w-7 h-7 rounded-full bg-tertiary-container flex items-center justify-center text-on-tertiary-container font-code-sm text-code-sm font-bold">
+              RC
+            </div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">Dr. Rachel Chen</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">Principal Investigator</span>
+</div>
+</div>
+<button class="px-space-md py-space-xs bg-surface-container text-on-surface hover:bg-surface-container-high rounded font-label-sm text-label-sm font-semibold transition-colors" type="button">
+            Notify for Co-Sign
+          </button>
+</div>
+</div>
+</aside>
+</div>
+</div>
+<script>
+  (function() {
+    // Interactive Bench Timer Functionality
+    let totalSeconds = 14 * 60 + 28; // 00:14:28
+    let isRunning = true;
+    let timerInterval = null;
+
+    const timerDisplay = document.getElementById('bench-countdown');
+    const toggleBtn = document.getElementById('timer-toggle-btn');
+    const toggleIcon = document.getElementById('timer-toggle-icon');
+    const toggleText = document.getElementById('timer-toggle-text');
+    const resetBtn = document.getElementById('timer-reset-btn');
+    const addBtn = document.getElementById('timer-add-btn');
+
+    function formatTime(seconds) {
+      const mins = Math.floor(seconds / 60);
+      const secs = seconds % 60;
+      const formattedMins = mins < 10 ? '0' + mins : mins;
+      const formattedSecs = secs < 10 ? '0' + secs : secs;
+      return '00:' + formattedMins + ':' + formattedSecs;
+    }
+
+    function updateTimer() {
+      if (isRunning && totalSeconds > 0) {
+        totalSeconds--;
+        if (timerDisplay) {
+          timerDisplay.textContent = formatTime(totalSeconds);
+        }
+      }
+    }
+
+    if (toggleBtn) {
+      toggleBtn.addEventListener('click', function() {
+        isRunning = !isRunning;
+        if (isRunning) {
+          toggleIcon.textContent = 'pause';
+          toggleText.textContent = 'Pause';
+        } else {
+          toggleIcon.textContent = 'play_arrow';
+          toggleText.textContent = 'Resume';
+        }
+      });
+    }
+
+    if (resetBtn) {
+      resetBtn.addEventListener('click', function() {
+        totalSeconds = 15 * 60; // 15 mins default
+        if (timerDisplay) timerDisplay.textContent = formatTime(totalSeconds);
+      });
+    }
+
+    if (addBtn) {
+      addBtn.addEventListener('click', function() {
+        totalSeconds += 300; // +5 mins
+        if (timerDisplay) timerDisplay.textContent = formatTime(totalSeconds);
+      });
+    }
+
+    timerInterval = setInterval(updateTimer, 1000);
+
+    // Reactive Fast Dilution Calculator
+    const inputC1 = document.getElementById('input-c1');
+    const inputC2 = document.getElementById('input-c2');
+    const inputV2 = document.getElementById('input-v2');
+    const outputV1 = document.getElementById('output-v1');
+    const bufferDiff = document.getElementById('buffer-diff');
+    const stampBtn = document.getElementById('calc-stamp-btn');
+
+    function recalculateDilution() {
+      if (!inputC1 || !inputC2 || !inputV2 || !outputV1 || !bufferDiff) return;
+      const c1 = parseFloat(inputC1.value) || 0;
+      const c2 = parseFloat(inputC2.value) || 0;
+      const v2 = parseFloat(inputV2.value) || 0;
+
+      if (c1 > 0 && c2 >= 0 && v2 >= 0) {
+        const v1 = (c2 * v2) / c1;
+        const diff = Math.max(0, v2 - v1);
+        outputV1.textContent = v1.toFixed(2);
+        bufferDiff.textContent = diff.toFixed(2) + ' µL';
+      }
+    }
+
+    if (inputC1) inputC1.addEventListener('input', recalculateDilution);
+    if (inputC2) inputC2.addEventListener('input', recalculateDilution);
+    if (inputV2) inputV2.addEventListener('input', recalculateDilution);
+
+    if (stampBtn) {
+      stampBtn.addEventListener('click', function() {
+        const originalText = stampBtn.innerHTML;
+        stampBtn.innerHTML = '<span class="material-symbols-outlined text-[16px]">check</span> Stamped to Record #2.2';
+        stampBtn.classList.remove('bg-secondary-container');
+        stampBtn.classList.add('bg-status-completed-bg', 'text-status-completed');
+        setTimeout(function() {
+          stampBtn.innerHTML = originalText;
+          stampBtn.classList.remove('bg-status-completed-bg', 'text-status-completed');
+          stampBtn.classList.add('bg-secondary-container');
+        }, 2200);
+      });
+    }
+  })();
+</script></main></div></body></html>

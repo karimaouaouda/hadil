@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-primary-fixed": "#00174b", "outline-variant": "#c3c6d7", "inverse-primary": "#b4c5ff", "on-tertiary-fixed": "#002114", "tertiary-fixed": "#85f8c4", "secondary": "#515f74", "on-secondary-fixed-variant": "#3a485b", "surface-container-lowest": "#ffffff", "on-tertiary-container": "#bdffdc", "secondary-container": "#d5e3fc", "secondary-fixed": "#d5e3fc", "on-secondary-container": "#57657a", "on-secondary": "#ffffff", "primary-fixed": "#dbe1ff", "surface-variant": "#dae2fd", "surface-container-low": "#f2f3ff", "on-tertiary-fixed-variant": "#005137", "on-surface": "#131b2e", "secondary-fixed-dim": "#b9c7df", "surface-container": "#eaedff", "on-primary": "#ffffff", "surface-container-high": "#e2e7ff", "inverse-on-surface": "#eef0ff", "primary": "#004ac6", "surface-tint": "#0053db", "surface-bright": "#faf8ff", "primary-fixed-dim": "#b4c5ff", "on-secondary-fixed": "#0d1c2e", "error": "#ba1a1a", "tertiary-container": "#007d57", "on-tertiary": "#ffffff", "inverse-surface": "#283044", "tertiary": "#006243", "error-container": "#ffdad6", "on-error": "#ffffff", "on-primary-fixed-variant": "#003ea8", "on-surface-variant": "#434655", "on-background": "#131b2e", "primary-container": "#2563eb", "surface-dim": "#d2d9f4", "background": "#faf8ff", "surface": "#faf8ff", "on-error-container": "#93000a", "tertiary-fixed-dim": "#68dba9", "outline": "#737686", "on-primary-container": "#eeefff", "surface-container-highest": "#dae2fd" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "margin-mobile": "1rem", "space-xl": "2rem", "gutter": "1rem", "space-sm": "0.5rem", "gutter-dense": "0.5rem", "space-xs": "0.25rem", "margin": "1.5rem", "space-lg": "1.25rem", "space-md": "0.75rem" }, "fontFamily": { "body-sm": ["Inter"], "body-md": ["Inter"], "headline-md": ["Inter"], "headline-lg": ["Inter"], "headline-xl": ["Inter"], "label-status": ["JetBrains Mono"], "label-code": ["JetBrains Mono"], "body-lg": ["Inter"], "headline-xl-mobile": ["Inter"], "label-data-sm": ["JetBrains Mono"] }, "fontSize": { "body-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.005em", "fontWeight": "400"}], "body-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400"}], "headline-md": ["18px", {"lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600"}], "headline-lg": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600"}], "headline-xl": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600"}], "label-status": ["10px", {"lineHeight": "12px", "letterSpacing": "0.06em", "fontWeight": "600"}], "label-code": ["13px", {"lineHeight": "18px", "letterSpacing": "-0.01em", "fontWeight": "500"}], "body-lg": ["16px", {"lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400"}], "headline-xl-mobile": ["26px", {"lineHeight": "34px", "letterSpacing": "-0.015em", "fontWeight": "600"}], "label-data-sm": ["11px", {"lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "500"}] } } } }</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col h-[calc(100vh-140px)]"><div class="h-16 px-space-lg flex items-center gap-space-sm bg-surface-container-low"><img alt="Anavix Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WonhjdbkuMtjootcG_Ws8SmwAVxhqup6aSQBce_Ts08YLe5fp5PbbJjsL1u2fA_6pcXvxmXlk2LlxpgyRQO8u_c_K4xBgbjmdn-8mKmQ7glrHt0CHTorkbLZwbtCH8hMgv8EoYTA4LSxDiKEybXt3RnOJmIstsEjukk2PapLL6jGw7HJjWpcAQPNyYOcb9G4tbzv4KgrxxFRVcyiKjCfdgmdqQxdPW4Jt9KqTxdnJR_0pS_eEkbyazcrw"/><div class="flex flex-col"><span class="font-headline-md text-headline-md text-on-surface tracking-tight uppercase leading-none">ANAVIX</span><span class="font-label-status text-label-status text-secondary tracking-widest uppercase mt-space-xs">Electronic Lab Notebook</span></div></div><div class="flex-1 overflow-y-auto px-space-md py-space-sm space-y-space-lg"><div class="space-y-space-xs"><div class="px-space-sm py-space-xs font-label-status text-label-status text-secondary uppercase tracking-wider">RESEARCH SPACE</div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="my-work" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span>My Work</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="experiment-editor" href="#"><span class="material-symbols-outlined text-[20px]">science</span><span>Notebook &amp; Experiments</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="digital-bench" href="#"><span class="material-symbols-outlined text-[20px]">timer</span><span>Digital Bench</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="protocol-library" href="#"><span class="material-symbols-outlined text-[20px]">menu_book</span><span>Protocol Library</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="calculators" href="#"><span class="material-symbols-outlined text-[20px]">calculate</span><span>Calculators</span></a></nav></div><div class="space-y-space-xs"><div class="px-space-sm py-space-xs font-label-status text-label-status text-secondary uppercase tracking-wider">SCIENTIFIC GOVERNANCE</div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg"><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm transition-colors bg-primary-container text-on-primary-container font-semibold rounded-lg" data-path="review-queue" href="#"><span class="material-symbols-outlined text-[20px]">verified</span><span>Review &amp; Approvals</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="audit-provenance" href="#"><span class="material-symbols-outlined text-[20px]">history_edu</span><span>Audit &amp; Provenance</span></a></nav></div><div class="space-y-space-xs"><div class="px-space-sm py-space-xs font-label-status text-label-status text-secondary uppercase tracking-wider">LAB OPERATIONS (UNIVERSITY LAB)</div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="inventory-reagents" href="#"><span class="material-symbols-outlined text-[20px]">inventory_2</span><span>Inventory &amp; Reagents</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="equipment-scheduling" href="#"><span class="material-symbols-outlined text-[20px]">calendar_month</span><span>Equipment Scheduling</span></a></nav></div></div></div><div class="p-space-md bg-surface-container-low flex flex-col gap-space-sm"><button class="w-full flex items-center justify-center gap-space-xs bg-primary hover:bg-primary-container text-on-primary py-space-sm px-space-md rounded-lg font-body-md text-body-md font-semibold transition-colors"><span class="material-symbols-outlined text-[18px]">add</span><span>New Experiment</span></button><div class="flex items-center justify-between px-space-xs pt-space-xs"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[14px] text-tertiary">verified_user</span><span class="font-label-status text-label-status text-secondary">HIPAA &amp; GLP Ready</span></div><span class="font-label-status text-label-status text-secondary bg-surface-container px-space-xs py-0.5 rounded">ISO 17025</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md flex-1 max-w-2xl"><div class="relative w-full max-w-md"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[18px]">search</span><input class="w-full pl-9 pr-space-md py-1.5 bg-surface-container-lowest text-on-surface placeholder:text-outline font-body-sm text-body-sm rounded-lg focus:outline-none focus:ring-1 focus:ring-primary" placeholder="Search experiments, protocols, lot numbers, reagents... ⌘K" type="text"/></div><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container-low font-label-data-sm text-label-data-sm text-secondary"><span class="material-symbols-outlined text-[14px] text-secondary">home_work</span><span>Current Lab: <strong class="text-on-surface font-semibold">BioMolecular Core A</strong> · Team: <strong class="text-on-surface font-semibold">Oncology Therapeutics</strong></span></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-sm py-1 bg-surface-container-lowest rounded-full shadow-[0_1px_4px_rgba(0,0,0,0.02)]"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-tertiary"></span></span><span class="font-label-status text-label-status text-on-surface">Autosave: Synced 14:32 UTC (Local buffer: 0)</span></div><div class="flex items-center bg-surface-container-low p-0.5 rounded-lg"><button class="flex items-center gap-1 px-space-xs py-0.5 rounded bg-surface-container-lowest text-on-surface font-label-status text-label-status shadow-[0_1px_2px_rgba(0,0,0,0.05)]" title="Lab Daylight"><span class="material-symbols-outlined text-[14px]">light_mode</span><span class="hidden 2xl:inline">Daylight</span></button><button class="flex items-center gap-1 px-space-xs py-0.5 rounded text-on-surface-variant hover:text-on-surface font-label-status text-label-status transition-colors" title="Deep Bench"><span class="material-symbols-outlined text-[14px]">dark_mode</span><span class="hidden 2xl:inline">Deep Bench</span></button></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="flex flex-col text-right hidden sm:block"><span class="font-body-sm text-body-sm font-semibold text-on-surface leading-tight">Dr. Elena Rostova</span><span class="font-label-status text-label-status text-secondary leading-tight">Lead Investigator (Researcher/Supervisor)</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="relative pt-16 w-full bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Sub-Header / Review Governance Strip -->
+<section class="bg-surface-container-low px-margin py-space-md shadow-sm">
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Scientific Review &amp; Approval Queue</span>
+<span class="px-space-sm py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-data-sm text-label-data-sm font-semibold">
+            Oncology Therapeutics · 3 Pending
+          </span>
+<span class="px-space-sm py-0.5 rounded-full bg-tertiary-container text-on-tertiary-container font-label-status text-label-status">
+            21 CFR PART 11 ENFORCED
+          </span>
+</div>
+<div class="flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-primary">verified_user</span>
+<span>Lead Reviewer:</span>
+<strong class="font-semibold text-on-surface">Dr. Marcus Thorne, Ph.D.</strong>
+<span class="text-outline">/</span>
+<span class="font-label-code text-label-code text-secondary">ID: US-ONC-REV-094</span>
+<span class="text-outline">/</span>
+<span class="text-secondary font-label-data-sm text-label-data-sm">Dual-Signer Mandate Active</span>
+</div>
+</div>
+<!-- Quick Metrics Ribbon -->
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-space-sm bg-surface-container-lowest px-space-md py-space-xs rounded-xl shadow-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">pending_actions</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-status text-label-status text-secondary uppercase">Average TAT</span>
+<span class="font-label-code text-label-code font-bold text-on-surface">3.8h <span class="text-tertiary font-normal">(-18%)</span></span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm bg-surface-container-lowest px-space-md py-space-xs rounded-xl shadow-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[20px]">verified</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-status text-label-status text-secondary uppercase">Compliance Rate</span>
+<span class="font-label-code text-label-code font-bold text-on-surface">99.4%</span>
+</div>
+</div>
+<button class="px-space-md py-space-xs bg-surface-container-lowest hover:bg-surface-container text-on-surface font-body-sm text-body-sm rounded-lg shadow-sm flex items-center gap-space-xs transition-colors" onclick="document.getElementById('audit-drawer').classList.toggle('hidden')">
+<span class="material-symbols-outlined text-[18px] text-secondary">history</span>
+<span>Queue Log</span>
+</button>
+</div>
+</div>
+<!-- Filter Navigation Bar -->
+<div class="mt-space-md flex items-center justify-between border-t border-transparent pt-space-xs overflow-x-auto">
+<div class="flex items-center gap-space-xs">
+<button class="flex items-center gap-space-xs px-space-md py-space-xs rounded-lg bg-primary text-on-primary font-body-sm text-body-sm font-semibold shadow-sm">
+<span class="material-symbols-outlined text-[16px]">assignment_turned_in</span>
+<span>Awaiting My Signature</span>
+<span class="px-1.5 py-0.2 rounded-full bg-surface-container-lowest text-primary font-label-status text-label-status">3</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-body-sm text-body-sm transition-colors">
+<span class="material-symbols-outlined text-[16px] text-error">edit_note</span>
+<span>Corrections Requested</span>
+<span class="px-1.5 py-0.2 rounded-full bg-error-container text-on-error-container font-label-status text-label-status">2</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-body-sm text-body-sm transition-colors">
+<span class="material-symbols-outlined text-[16px] text-tertiary">lock</span>
+<span>Approved &amp; Locked</span>
+<span class="px-1.5 py-0.2 rounded-full bg-surface-container text-secondary font-label-status text-label-status">48</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-body-sm text-body-sm transition-colors">
+<span class="material-symbols-outlined text-[16px]">folder_special</span>
+<span>All Lab Audits</span>
+</button>
+</div>
+<div class="hidden lg:flex items-center gap-space-sm">
+<span class="font-label-status text-label-status text-secondary">AUTO-ROUTING: SOP REV-4</span>
+<div class="w-2 h-2 rounded-full bg-tertiary"></div>
+</div>
+</div>
+</section>
+<!-- Main Split-Screen Workplace -->
+<div class="flex flex-col xl:flex-row w-full p-margin gap-margin">
+<!-- LEFT PANEL: Review Queue List (30%) -->
+<section class="w-full xl:w-[32%] flex flex-col gap-space-md">
+<div class="flex items-center justify-between px-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-status text-label-status text-secondary tracking-widest uppercase">Active Worklist</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-data-sm text-label-data-sm">3 experiments</span>
+</div>
+<div class="flex items-center gap-space-xs text-secondary font-label-data-sm text-label-data-sm">
+<span>Sort: Urgency</span>
+<span class="material-symbols-outlined text-[16px]">unfold_more</span>
+</div>
+</div>
+<!-- Queue Card 1 (Selected Record) -->
+<article class="bg-surface-container-lowest p-space-md rounded-xl shadow-md cursor-pointer relative overflow-hidden transition-all transform hover:-translate-y-0.5">
+<div class="absolute top-0 left-0 bottom-0 w-1.5 bg-primary"></div>
+<div class="flex items-start justify-between gap-space-sm pl-space-xs">
+<div class="flex flex-col gap-0.5">
+<span class="font-label-code text-label-code font-bold text-primary">EXP-2026-0872</span>
+<span class="font-headline-md text-body-lg font-bold text-on-surface leading-snug">Recombinant Protein Thermal Shift Assay</span>
+</div>
+<span class="px-space-xs py-0.5 rounded bg-error-container text-on-error-container font-label-status text-label-status uppercase font-bold tracking-wider whitespace-nowrap">
+            Priority Q4
+          </span>
+</div>
+<div class="mt-space-sm pl-space-xs space-y-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<div class="flex items-center justify-between">
+<span class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-secondary">person</span>
+              Dr. Elena Rostova
+            </span>
+<span class="font-label-data-sm text-label-data-sm text-secondary">Today 11:20 UTC</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-tertiary">task_alt</span>
+              Protocol SOP-PRT-v2.0
+            </span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container font-label-status text-label-status text-tertiary font-bold">100% SOP (0 Dev)</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs pl-space-xs flex items-center justify-between bg-surface-container-low p-space-xs rounded-lg">
+<span class="font-label-status text-label-status text-secondary">SHA-256: 7f81a...d901</span>
+<span class="flex items-center gap-1 text-primary font-label-data-sm text-label-data-sm font-semibold">
+<span>Inspect Record</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</span>
+</div>
+</article>
+<!-- Queue Card 2 -->
+<article class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md cursor-pointer relative overflow-hidden transition-all bg-opacity-90">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex flex-col gap-0.5">
+<span class="font-label-code text-label-code font-bold text-secondary">EXP-2026-0865</span>
+<span class="font-body-lg text-body-lg font-semibold text-on-surface leading-snug">Pharmacokinetic Clearance in Mouse Plasma</span>
+</div>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-on-surface font-label-status text-label-status uppercase">
+            Queued
+          </span>
+</div>
+<div class="mt-space-sm space-y-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<div class="flex items-center justify-between">
+<span class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-secondary">person</span>
+              Dr. Alex Mercer
+            </span>
+<span class="font-label-data-sm text-label-data-sm text-secondary">Yesterday 18:40</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="flex items-center gap-space-xs text-error">
+<span class="material-symbols-outlined text-[16px]">warning</span>
+              Deviation Logged
+            </span>
+<span class="px-1.5 py-0.5 rounded bg-error-container text-on-error-container font-label-status text-label-status">Lot Variance #091</span>
+</div>
+</div>
+</article>
+<!-- Queue Card 3 -->
+<article class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md cursor-pointer relative overflow-hidden transition-all opacity-80 hover:opacity-100">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex flex-col gap-0.5">
+<span class="font-label-code text-label-code font-bold text-secondary">EXP-2026-0850</span>
+<span class="font-body-lg text-body-lg font-semibold text-on-surface leading-snug">Dual-Luciferase Reporter Assay (Target BRAF)</span>
+</div>
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-secondary font-label-status text-label-status uppercase">
+            3d ago
+          </span>
+</div>
+<div class="mt-space-sm space-y-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<div class="flex items-center justify-between">
+<span class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-secondary">person</span>
+              Dr. Sarah Lin
+            </span>
+<span class="font-label-data-sm text-label-data-sm text-secondary">Batch Ref #LUC-7</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-tertiary">task_alt</span>
+              Standard Assay
+            </span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container font-label-status text-label-status text-secondary">Pending Co-review</span>
+</div>
+</div>
+</article>
+<!-- Regulatory Notice Banner -->
+<div class="bg-secondary-container/40 p-space-md rounded-xl flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-[20px] text-primary shrink-0 mt-0.5">verified</span>
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-status text-label-status uppercase font-bold text-on-secondary-container">Audit Integrity Lock</span>
+<p class="font-body-sm text-body-sm text-on-secondary-container leading-relaxed">
+            All supervisor approvals initiate cryptographic hash chain verification. Dual identity authorization is recorded on immutable institutional ledgers.
+          </p>
+</div>
+</div>
+</section>
+<!-- RIGHT PANEL: Record Deep-Dive & Comparison (70%) -->
+<section class="w-full xl:w-[68%] flex flex-col gap-space-lg">
+<!-- Primary Review Canvas Container -->
+<div class="bg-surface-container-lowest rounded-xl shadow-md p-space-lg flex flex-col gap-space-lg">
+<!-- Header & Provenance Strip -->
+<div class="flex flex-col gap-space-sm pb-space-md bg-surface-container-low -mx-space-lg -mt-space-lg p-space-lg rounded-t-xl">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="font-label-code text-headline-md font-bold text-primary">EXP-2026-0872</span>
+<span class="px-space-sm py-1 rounded bg-secondary-container text-on-secondary-container font-label-status text-label-status font-bold">
+                AWAITING SCIENTIFIC APPROVAL
+              </span>
+<span class="px-space-sm py-1 rounded bg-surface-container-high text-on-surface font-label-status text-label-status">
+                REV 2.0 (FINAL)
+              </span>
+</div>
+<!-- Quick Action Toolbar -->
+<div class="flex items-center gap-space-xs">
+<button class="px-space-sm py-1 rounded bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-data-sm text-label-data-sm flex items-center gap-1 shadow-sm transition-colors">
+<span class="material-symbols-outlined text-[16px]">print</span>
+<span>Audit PDF</span>
+</button>
+<button class="px-space-sm py-1 rounded bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-data-sm text-label-data-sm flex items-center gap-1 shadow-sm transition-colors">
+<span class="material-symbols-outlined text-[16px]">fullscreen</span>
+<span>Zen View</span>
+</button>
+</div>
+</div>
+<h1 class="font-headline-xl text-headline-lg md:text-headline-xl text-on-surface tracking-tight">
+            Recombinant Protein Thermal Shift Assay (Thermostability Screen)
+          </h1>
+<!-- Authorship and Cryptographic Provenance Block -->
+<div class="flex flex-wrap items-center gap-space-md pt-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<div class="flex items-center gap-space-xs">
+<div class="w-6 h-6 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-bold text-[10px]">
+                ER
+              </div>
+<span>Author: <strong class="text-on-surface">Dr. Elena Rostova</strong> (Lead Scientist)</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-tertiary">check_circle</span>
+<span>Author Signature: <strong class="text-on-surface font-label-data-sm text-label-data-sm">SHA-256 Validated 11:20:04 UTC</strong></span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-secondary">database</span>
+<span>Lab Unit: Core Facility 4B</span>
+</div>
+</div>
+</div>
+<!-- Section: Revision Diff & Traceability Tool -->
+<div class="flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[20px] text-primary">difference</span>
+<span class="font-headline-md text-headline-md text-on-surface">Traceability &amp; Revision Diff</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-status text-label-status">
+                2 Alterations Detected
+              </span>
+</div>
+<!-- Toggle Buttons -->
+<div class="flex items-center bg-surface-container-low p-1 rounded-lg">
+<button class="px-space-sm py-1 rounded bg-surface-container-lowest font-label-status text-label-status font-bold text-on-surface shadow-sm" id="btn-split" onclick="setDiffView('split')">
+                Split Side-by-Side
+              </button>
+<button class="px-space-sm py-1 rounded font-label-status text-label-status text-secondary hover:text-on-surface" id="btn-inline" onclick="setDiffView('inline')">
+                Unified Log
+              </button>
+</div>
+</div>
+<!-- Comparison Container -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-md">
+<!-- Diff Item 1: Measurement Table Value -->
+<div class="bg-surface-container-lowest rounded-lg p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between flex-wrap gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-secondary">table_chart</span>
+<span class="font-body-md text-body-md font-semibold text-on-surface">Thermal Stability Measurement Parameter: Tm (Melting Temperature)</span>
+</div>
+<span class="font-label-status text-label-status px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant">
+                  MODIFIED FIELD · STEP 4.2
+                </span>
+</div>
+<!-- Side-by-Side Values -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md pt-space-xs">
+<!-- Rev 1 Draft -->
+<div class="bg-error-container/20 p-space-sm rounded-lg flex flex-col gap-space-xs">
+<div class="flex items-center justify-between text-error font-label-status text-label-status font-bold">
+<span>REV 1 (PREVIOUS DRAFT)</span>
+<span>10:04 UTC</span>
+</div>
+<div class="flex items-baseline gap-space-xs font-label-code text-headline-md text-error">
+<span>54.2</span>
+<span class="text-body-sm">°C</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Instrument raw direct readout</span>
+</div>
+<!-- Rev 2 Final -->
+<div class="bg-tertiary-container/15 p-space-sm rounded-lg flex flex-col gap-space-xs">
+<div class="flex items-center justify-between text-tertiary font-label-status text-label-status font-bold">
+<span>REV 2 (CURRENT SUBMISSION)</span>
+<span>11:20 UTC</span>
+</div>
+<div class="flex items-baseline gap-space-xs font-label-code text-headline-md text-tertiary">
+<span>54.8</span>
+<span class="text-body-sm">°C</span>
+<span class="font-label-status text-label-status text-tertiary font-bold px-1.5 py-0.5 rounded bg-surface-container-lowest ml-space-xs">+0.6 °C DELTA</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface">Post-baseline fluorophore correction</span>
+</div>
+</div>
+<!-- Author Justification Note -->
+<div class="bg-surface-container-low p-space-sm rounded-lg flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-[18px] text-primary shrink-0 mt-0.5">comment</span>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-data-sm text-label-data-sm font-bold text-on-surface">Author Justification (Dr. Elena Rostova):</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic">
+                    "Recalibrated with reference dye baseline subtraction according to Protein Therm Shift Software protocol v4.1. Raw delta curve recalculation attached."
+                  </p>
+</div>
+</div>
+</div>
+<!-- Diff Item 2: Added Raw File Proof -->
+<div class="bg-surface-container-lowest rounded-lg p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between flex-wrap gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-tertiary">attach_file_add</span>
+<span class="font-body-md text-body-md font-semibold text-on-surface">Instrument Raw Telemetry File Appended</span>
+</div>
+<span class="font-label-status text-label-status px-2 py-0.5 rounded bg-tertiary-container text-on-tertiary-container font-bold">
+                  IMMUTABLE PAYLOAD ADDED
+                </span>
+</div>
+<div class="flex items-center justify-between bg-surface-container-low p-space-sm rounded-lg flex-wrap gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded bg-primary-container text-on-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">data_object</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-code text-label-code font-bold text-on-surface">Thermal_Fluorescence_Raw_Run4.csv</span>
+<span class="font-label-data-sm text-label-data-sm text-secondary">Size: 4.8 MB · QuantStudio 7 Flex Raw Output</span>
+</div>
+</div>
+<div class="flex items-center gap-space-md">
+<div class="flex flex-col text-right">
+<span class="font-label-status text-label-status text-secondary">SHA-256 HASH VERIFICATION</span>
+<span class="font-label-code text-label-data-sm font-semibold text-tertiary">e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855</span>
+</div>
+<button class="px-space-sm py-1.5 rounded bg-surface-container-lowest hover:bg-surface-container text-primary font-body-sm text-body-sm font-semibold flex items-center gap-1 shadow-sm transition-colors">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>Inspect Raw Spectrum</span>
+</button>
+</div>
+</div>
+<!-- Inline Fluorescence Curve SVG Visualizer -->
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-status text-label-status text-secondary uppercase font-bold">Normalized Fluorescence Derivative (-dF/dT) Curve</span>
+<span class="font-label-data-sm text-label-data-sm text-tertiary font-bold">Peak Tm: 54.8 °C</span>
+</div>
+<div class="w-full h-28 relative">
+<svg class="w-full h-full text-primary" preserveaspectratio="none" viewbox="0 0 600 100">
+<!-- Grid Lines -->
+<line stroke="currentColor" stroke-dasharray="2 2" stroke-opacity="0.1" x1="0" x2="600" y1="25" y2="25"></line>
+<line stroke="currentColor" stroke-dasharray="2 2" stroke-opacity="0.1" x1="0" x2="600" y1="50" y2="50"></line>
+<line stroke="currentColor" stroke-dasharray="2 2" stroke-opacity="0.1" x1="0" x2="600" y1="75" y2="75"></line>
+<!-- Baseline Curve Rev 1 (Pale) -->
+<path d="M 0,90 Q 200,90 280,70 T 320,15 T 360,85 T 600,90" fill="none" opacity="0.5" stroke="#ba1a1a" stroke-dasharray="4 3" stroke-width="1.5"></path>
+<!-- Recalibrated Curve Rev 2 (Solid Emerald/Cobalt) -->
+<path d="M 0,90 Q 210,90 295,72 T 335,10 T 375,85 T 600,90" fill="none" stroke="#004ac6" stroke-width="2.5"></path>
+<!-- Marker for Tm -->
+<circle cx="335" cy="10" fill="#007d57" r="4"></circle>
+</svg>
+</div>
+<div class="flex items-center justify-between font-label-data-sm text-label-data-sm text-secondary pt-1">
+<span>25 °C</span>
+<span class="text-error">Rev 1 Peak (54.2 °C)</span>
+<span class="text-primary font-bold">Rev 2 Calibrated (54.8 °C)</span>
+<span>95 °C</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Section: Scientific Integrity & Checklist Validation -->
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-headline-md text-headline-md text-on-surface">Scientific Integrity &amp; Compliance Checks</span>
+<span class="px-space-sm py-0.5 rounded bg-tertiary-container text-on-tertiary-container font-label-status text-label-status font-bold">
+              4 of 4 PASSED
+            </span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-sm">
+<!-- Check item 1 -->
+<div class="bg-surface-container-low p-space-md rounded-lg flex items-start gap-space-sm">
+<div class="w-6 h-6 rounded bg-tertiary text-on-tertiary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-bold text-on-surface">Protocol Baseline Verified</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Validated against SOP-PRT-v2.0 standard operational guidelines with zero parameter override.</span>
+</div>
+</div>
+<!-- Check item 2 -->
+<div class="bg-surface-container-low p-space-md rounded-lg flex items-start gap-space-sm">
+<div class="w-6 h-6 rounded bg-tertiary text-on-tertiary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-bold text-on-surface">Raw Telemetry Attached &amp; Locked</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Unprocessed CSV spectrometer exports verified with irreversible SHA-256 hash stamp.</span>
+</div>
+</div>
+<!-- Check item 3 -->
+<div class="bg-surface-container-low p-space-md rounded-lg flex items-start gap-space-sm">
+<div class="w-6 h-6 rounded bg-tertiary text-on-tertiary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-bold text-on-surface">Mathematical Formulas Validated</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Boltzmann 4-parameter sigmoidal curve fitting equations converged with R² = 0.9984.</span>
+</div>
+</div>
+<!-- Check item 4 -->
+<div class="bg-surface-container-low p-space-md rounded-lg flex items-start gap-space-sm">
+<div class="w-6 h-6 rounded bg-tertiary text-on-tertiary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-bold text-on-surface">No Unresolved Safety Flags</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Biosafety level BSL-2 protocol followed; hazardous waste neutralization logged.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Section: Decision & Dual-Signer Sign-off Panel -->
+<div class="bg-surface-container-low rounded-xl p-space-lg flex flex-col gap-space-md shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[20px] text-primary">draw</span>
+<span class="font-headline-md text-headline-md text-on-surface">Principal Reviewer Decision &amp; E-Signature</span>
+</div>
+<span class="font-label-status text-label-status text-secondary">LEGAL EQUIVALENT TO HANDWRITTEN SIGNATURE</span>
+</div>
+<!-- Supervisor Feedback Textarea -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-status text-label-status text-secondary uppercase tracking-wider">
+              Supervisor Review Comments &amp; Audit Justification (Required for Sign-off)
+            </label>
+<textarea class="w-full p-space-md bg-surface-container-lowest text-on-surface font-body-md text-body-md rounded-lg focus:outline-none focus:ring-1 focus:ring-primary placeholder:text-outline shadow-sm resize-none" id="reviewer-comments" placeholder="Enter scientific evaluation, confirmation of baseline normalization check, and approval statement..." rows="3"></textarea>
+</div>
+<!-- Action Buttons Bar -->
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-space-md pt-space-xs">
+<button class="px-space-md py-space-sm bg-surface-container-lowest hover:bg-surface-container text-error font-body-md text-body-md font-semibold rounded-lg shadow-sm flex items-center justify-center gap-space-xs transition-colors" onclick="requestCorrections()">
+<span class="material-symbols-outlined text-[18px]">undo</span>
+<span>Request Scientific Corrections</span>
+</button>
+<button class="px-space-lg py-space-sm bg-tertiary-container hover:bg-tertiary text-on-tertiary font-body-md text-body-md font-bold rounded-lg shadow-md flex items-center justify-center gap-space-sm transition-all transform hover:scale-[1.01]" onclick="openSignModal()">
+<span class="material-symbols-outlined text-[20px]">signature</span>
+<span>Approve &amp; Lock Record (21 CFR Part 11)</span>
+<span class="font-label-code text-label-status px-1.5 py-0.5 rounded bg-surface-container-lowest text-tertiary font-bold">⌘↵</span>
+</button>
+</div>
+<!-- Legal & Compliance Footnote -->
+<div class="flex items-center gap-space-xs pt-space-xs text-secondary font-label-data-sm text-label-data-sm">
+<span class="material-symbols-outlined text-[16px] text-tertiary">lock_clock</span>
+<span>Once approved and counter-signed, this experiment enters permanent immutable custody and is archived for USPTO patent defense &amp; FDA NDA filings.</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- MODAL: 21 CFR Part 11 Dual Biometric / Credential Electronic Signature Prompt -->
+<div class="hidden fixed inset-0 z-50 flex items-center justify-center bg-inverse-surface/60 backdrop-blur-xs p-margin" id="esign-modal">
+<div class="bg-surface-container-lowest w-full max-w-xl rounded-xl shadow-2xl p-space-xl flex flex-col gap-space-lg relative">
+<div class="flex items-center justify-between pb-space-sm bg-surface-container-low -mx-space-xl -mt-space-xl px-space-xl py-space-md rounded-t-xl">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-tertiary-container text-on-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">verified</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">21 CFR Part 11 Signature Execution</h3>
+<span class="font-label-status text-label-status text-secondary uppercase">Cryptographic Identity Attestation</span>
+</div>
+</div>
+<button class="text-secondary hover:text-on-surface" onclick="closeSignModal()">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="space-y-space-md">
+<div class="bg-surface-container-low p-space-md rounded-lg space-y-space-xs font-body-sm text-body-sm">
+<div class="flex justify-between">
+<span class="text-secondary">Signer Name:</span>
+<span class="font-bold text-on-surface">Dr. Marcus Thorne, Ph.D.</span>
+</div>
+<div class="flex justify-between">
+<span class="text-secondary">Signing Role:</span>
+<span class="font-bold text-primary">Principal Reviewer (Investigator Supervisor)</span>
+</div>
+<div class="flex justify-between">
+<span class="text-secondary">Target Document:</span>
+<span class="font-label-code text-on-surface font-semibold">EXP-2026-0872 (Rev 2.0 Final)</span>
+</div>
+<div class="flex justify-between">
+<span class="text-secondary">Signing Meaning:</span>
+<span class="text-tertiary font-bold">Scientific Approval &amp; Quality Conformance</span>
+</div>
+</div>
+<!-- Credentials Input -->
+<div class="space-y-space-sm">
+<div>
+<label class="block font-label-status text-label-status text-secondary uppercase">Institutional Master Password / Passkey</label>
+<input class="w-full mt-1 px-space-md py-space-sm bg-surface-container-low text-on-surface font-label-code rounded-lg focus:outline-none focus:ring-1 focus:ring-primary" id="signer-pwd" type="password" value="••••••••••••••••"/>
+</div>
+<div>
+<label class="block font-label-status text-label-status text-secondary uppercase">Reviewer 2FA One-Time Token (TOTP)</label>
+<div class="flex items-center gap-space-sm mt-1">
+<input class="w-40 px-space-md py-space-sm bg-surface-container-low text-on-surface font-label-code text-center font-bold tracking-widest rounded-lg focus:outline-none focus:ring-1 focus:ring-primary" maxlength="6" placeholder="000-000" type="text" value="849201"/>
+<span class="font-label-data-sm text-label-data-sm text-tertiary flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span>Token Synchronized</span>
+</span>
+</div>
+</div>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-lg text-secondary font-label-data-sm text-label-data-sm leading-relaxed">
+          By signing, you certify under penalty of institutional sanctions that you have reviewed all raw datasets and verify this protocol complies with GLP standard operations.
+        </div>
+</div>
+<div class="flex items-center justify-end gap-space-sm pt-space-xs">
+<button class="px-space-md py-space-sm rounded-lg text-secondary hover:bg-surface-container font-body-md text-body-md transition-colors" onclick="closeSignModal()">
+          Cancel
+        </button>
+<button class="px-space-lg py-space-sm bg-tertiary-container hover:bg-tertiary text-on-tertiary font-body-md text-body-md font-bold rounded-lg shadow-md flex items-center gap-space-xs transition-colors" onclick="executeSignature()">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span>Execute &amp; Seal Immutable Record</span>
+</button>
+</div>
+</div>
+</div>
+<!-- FLOATING AUDIT PROVENANCE SLIDE-OUT DRAWER -->
+<aside class="hidden fixed top-16 right-0 bottom-0 w-96 bg-surface-container-lowest shadow-2xl z-40 p-space-lg flex flex-col gap-space-md overflow-y-auto" id="audit-drawer">
+<div class="flex items-center justify-between pb-space-sm border-b border-surface-container">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[20px] text-primary">history_edu</span>
+<span class="font-headline-md text-headline-md text-on-surface">Queue Provenance</span>
+</div>
+<button class="text-secondary hover:text-on-surface" onclick="document.getElementById('audit-drawer').classList.add('hidden')">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="space-y-space-md">
+<div class="relative pl-space-md before:absolute before:left-1 before:top-2 before:bottom-0 before:w-0.5 before:bg-surface-container-high space-y-space-lg">
+<div class="relative">
+<span class="absolute -left-[21px] top-1 w-3 h-3 rounded-full bg-tertiary"></span>
+<span class="font-label-status text-label-status text-secondary">TODAY 11:20:04 UTC</span>
+<p class="font-body-sm text-body-sm font-semibold text-on-surface mt-0.5">Final Revision 2.0 Submitted</p>
+<span class="font-label-data-sm text-label-data-sm text-on-surface-variant">Dr. Elena Rostova uploaded calibrated baseline.</span>
+</div>
+<div class="relative">
+<span class="absolute -left-[21px] top-1 w-3 h-3 rounded-full bg-secondary"></span>
+<span class="font-label-status text-label-status text-secondary">TODAY 10:15:22 UTC</span>
+<p class="font-body-sm text-body-sm font-semibold text-on-surface mt-0.5">Automated Check Engine Executed</p>
+<span class="font-label-data-sm text-label-data-sm text-on-surface-variant">SOP validation rule PRT-02 passed without warnings.</span>
+</div>
+<div class="relative">
+<span class="absolute -left-[21px] top-1 w-3 h-3 rounded-full bg-primary"></span>
+<span class="font-label-status text-label-status text-secondary">TODAY 09:40:10 UTC</span>
+<p class="font-body-sm text-body-sm font-semibold text-on-surface mt-0.5">QuantStudio Run 4 Completed</p>
+<span class="font-label-data-sm text-label-data-sm text-on-surface-variant">Direct instrument socket transfer verified.</span>
+</div>
+</div>
+</div>
+</aside>
+<!-- Notification Toast Anchor -->
+<div class="hidden fixed bottom-6 right-6 bg-inverse-surface text-inverse-on-surface px-space-lg py-space-md rounded-xl shadow-xl z-50 flex items-center gap-space-sm font-body-sm text-body-sm transition-all transform translate-y-2" id="toast-msg">
+<span class="material-symbols-outlined text-[20px] text-tertiary-fixed">verified</span>
+<span id="toast-text">Electronic Signature Executed. Record EXP-2026-0872 is now immutable.</span>
+</div>
+</div>
+<script>
+  function openSignModal() {
+    document.getElementById('esign-modal').classList.remove('hidden');
+  }
+
+  function closeSignModal() {
+    document.getElementById('esign-modal').classList.add('hidden');
+  }
+
+  function executeSignature() {
+    closeSignModal();
+    const toast = document.getElementById('toast-msg');
+    const toastText = document.getElementById('toast-text');
+    toastText.innerText = "Electronic Signature Recorded! EXP-2026-0872 is now permanently locked.";
+    toast.classList.remove('hidden');
+    toast.classList.remove('translate-y-2');
+    setTimeout(() => {
+      toast.classList.add('hidden');
+    }, 4500);
+  }
+
+  function requestCorrections() {
+    const comments = document.getElementById('reviewer-comments').value.trim();
+    if (!comments) {
+      alert("Please provide annotation comments explaining the requested corrections before returning the draft to the investigator.");
+      document.getElementById('reviewer-comments').focus();
+      return;
+    }
+    const toast = document.getElementById('toast-msg');
+    const toastText = document.getElementById('toast-text');
+    toastText.innerText = "Draft returned to Dr. Elena Rostova with supervisor annotation notes.";
+    toast.classList.remove('hidden');
+    setTimeout(() => {
+      toast.classList.add('hidden');
+    }, 4000);
+  }
+
+  function setDiffView(viewMode) {
+    const btnSplit = document.getElementById('btn-split');
+    const btnInline = document.getElementById('btn-inline');
+    if (viewMode === 'split') {
+      btnSplit.className = "px-space-sm py-1 rounded bg-surface-container-lowest font-label-status text-label-status font-bold text-on-surface shadow-sm";
+      btnInline.className = "px-space-sm py-1 rounded font-label-status text-label-status text-secondary hover:text-on-surface";
+    } else {
+      btnInline.className = "px-space-sm py-1 rounded bg-surface-container-lowest font-label-status text-label-status font-bold text-on-surface shadow-sm";
+      btnSplit.className = "px-space-sm py-1 rounded font-label-status text-label-status text-secondary hover:text-on-surface";
+    }
+  }
+
+  // Keyboard shortcut listener for dual-signer quick approve (Cmd + Enter)
+  document.addEventListener('keydown', function(event) {
+    if ((event.metaKey || event.ctrlKey) && event.key === 'Enter') {
+      event.preventDefault();
+      openSignModal();
+    }
+  });
+</script></main></div></body></html>

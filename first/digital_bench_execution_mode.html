@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-primary-fixed": "#00174b", "outline-variant": "#c3c6d7", "inverse-primary": "#b4c5ff", "on-tertiary-fixed": "#002114", "tertiary-fixed": "#85f8c4", "secondary": "#515f74", "on-secondary-fixed-variant": "#3a485b", "surface-container-lowest": "#ffffff", "on-tertiary-container": "#bdffdc", "secondary-container": "#d5e3fc", "secondary-fixed": "#d5e3fc", "on-secondary-container": "#57657a", "on-secondary": "#ffffff", "primary-fixed": "#dbe1ff", "surface-variant": "#dae2fd", "surface-container-low": "#f2f3ff", "on-tertiary-fixed-variant": "#005137", "on-surface": "#131b2e", "secondary-fixed-dim": "#b9c7df", "surface-container": "#eaedff", "on-primary": "#ffffff", "surface-container-high": "#e2e7ff", "inverse-on-surface": "#eef0ff", "primary": "#004ac6", "surface-tint": "#0053db", "surface-bright": "#faf8ff", "primary-fixed-dim": "#b4c5ff", "on-secondary-fixed": "#0d1c2e", "error": "#ba1a1a", "tertiary-container": "#007d57", "on-tertiary": "#ffffff", "inverse-surface": "#283044", "tertiary": "#006243", "error-container": "#ffdad6", "on-error": "#ffffff", "on-primary-fixed-variant": "#003ea8", "on-surface-variant": "#434655", "on-background": "#131b2e", "primary-container": "#2563eb", "surface-dim": "#d2d9f4", "background": "#faf8ff", "surface": "#faf8ff", "on-error-container": "#93000a", "tertiary-fixed-dim": "#68dba9", "outline": "#737686", "on-primary-container": "#eeefff", "surface-container-highest": "#dae2fd" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "margin-mobile": "1rem", "space-xl": "2rem", "gutter": "1rem", "space-sm": "0.5rem", "gutter-dense": "0.5rem", "space-xs": "0.25rem", "margin": "1.5rem", "space-lg": "1.25rem", "space-md": "0.75rem" }, "fontFamily": { "body-sm": ["Inter"], "body-md": ["Inter"], "headline-md": ["Inter"], "headline-lg": ["Inter"], "headline-xl": ["Inter"], "label-status": ["JetBrains Mono"], "label-code": ["JetBrains Mono"], "body-lg": ["Inter"], "headline-xl-mobile": ["Inter"], "label-data-sm": ["JetBrains Mono"] }, "fontSize": { "body-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.005em", "fontWeight": "400"}], "body-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400"}], "headline-md": ["18px", {"lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600"}], "headline-lg": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600"}], "headline-xl": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600"}], "label-status": ["10px", {"lineHeight": "12px", "letterSpacing": "0.06em", "fontWeight": "600"}], "label-code": ["13px", {"lineHeight": "18px", "letterSpacing": "-0.01em", "fontWeight": "500"}], "body-lg": ["16px", {"lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400"}], "headline-xl-mobile": ["26px", {"lineHeight": "34px", "letterSpacing": "-0.015em", "fontWeight": "600"}], "label-data-sm": ["11px", {"lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "500"}] } } } }</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col h-[calc(100vh-140px)]"><div class="h-16 px-space-lg flex items-center gap-space-sm bg-surface-container-low"><img alt="Anavix Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WonhjdbkuMtjootcG_Ws8SmwAVxhqup6aSQBce_Ts08YLe5fp5PbbJjsL1u2fA_6pcXvxmXlk2LlxpgyRQO8u_c_K4xBgbjmdn-8mKmQ7glrHt0CHTorkbLZwbtCH8hMgv8EoYTA4LSxDiKEybXt3RnOJmIstsEjukk2PapLL6jGw7HJjWpcAQPNyYOcb9G4tbzv4KgrxxFRVcyiKjCfdgmdqQxdPW4Jt9KqTxdnJR_0pS_eEkbyazcrw"/><div class="flex flex-col"><span class="font-headline-md text-headline-md text-on-surface tracking-tight uppercase leading-none">ANAVIX</span><span class="font-label-status text-label-status text-secondary tracking-widest uppercase mt-space-xs">Electronic Lab Notebook</span></div></div><div class="flex-1 overflow-y-auto px-space-md py-space-sm space-y-space-lg"><div class="space-y-space-xs"><div class="px-space-sm py-space-xs font-label-status text-label-status text-secondary uppercase tracking-wider">RESEARCH SPACE</div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="my-work" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span>My Work</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="experiment-editor" href="#"><span class="material-symbols-outlined text-[20px]">science</span><span>Notebook &amp; Experiments</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm transition-colors bg-primary-container text-on-primary-container font-semibold rounded-lg" data-path="digital-bench" href="#"><span class="material-symbols-outlined text-[20px]">timer</span><span>Digital Bench</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="protocol-library" href="#"><span class="material-symbols-outlined text-[20px]">menu_book</span><span>Protocol Library</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="calculators" href="#"><span class="material-symbols-outlined text-[20px]">calculate</span><span>Calculators</span></a></nav></div><div class="space-y-space-xs"><div class="px-space-sm py-space-xs font-label-status text-label-status text-secondary uppercase tracking-wider">SCIENTIFIC GOVERNANCE</div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="review-queue" href="#"><span class="material-symbols-outlined text-[20px]">verified</span><span>Review &amp; Approvals</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="audit-provenance" href="#"><span class="material-symbols-outlined text-[20px]">history_edu</span><span>Audit &amp; Provenance</span></a></nav></div><div class="space-y-space-xs"><div class="px-space-sm py-space-xs font-label-status text-label-status text-secondary uppercase tracking-wider">LAB OPERATIONS (UNIVERSITY LAB)</div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="inventory-reagents" href="#"><span class="material-symbols-outlined text-[20px]">inventory_2</span><span>Inventory &amp; Reagents</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="equipment-scheduling" href="#"><span class="material-symbols-outlined text-[20px]">calendar_month</span><span>Equipment Scheduling</span></a></nav></div></div></div><div class="p-space-md bg-surface-container-low flex flex-col gap-space-sm"><button class="w-full flex items-center justify-center gap-space-xs bg-primary hover:bg-primary-container text-on-primary py-space-sm px-space-md rounded-lg font-body-md text-body-md font-semibold transition-colors"><span class="material-symbols-outlined text-[18px]">add</span><span>New Experiment</span></button><div class="flex items-center justify-between px-space-xs pt-space-xs"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[14px] text-tertiary">verified_user</span><span class="font-label-status text-label-status text-secondary">HIPAA &amp; GLP Ready</span></div><span class="font-label-status text-label-status text-secondary bg-surface-container px-space-xs py-0.5 rounded">ISO 17025</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md flex-1 max-w-2xl"><div class="relative w-full max-w-md"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[18px]">search</span><input class="w-full pl-9 pr-space-md py-1.5 bg-surface-container-lowest text-on-surface placeholder:text-outline font-body-sm text-body-sm rounded-lg focus:outline-none focus:ring-1 focus:ring-primary" placeholder="Search experiments, protocols, lot numbers, reagents... ⌘K" type="text"/></div><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container-low font-label-data-sm text-label-data-sm text-secondary"><span class="material-symbols-outlined text-[14px] text-secondary">home_work</span><span>Current Lab: <strong class="text-on-surface font-semibold">BioMolecular Core A</strong> · Team: <strong class="text-on-surface font-semibold">Oncology Therapeutics</strong></span></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-sm py-1 bg-surface-container-lowest rounded-full shadow-[0_1px_4px_rgba(0,0,0,0.02)]"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-tertiary"></span></span><span class="font-label-status text-label-status text-on-surface">Autosave: Synced 14:32 UTC (Local buffer: 0)</span></div><div class="flex items-center bg-surface-container-low p-0.5 rounded-lg"><button class="flex items-center gap-1 px-space-xs py-0.5 rounded bg-surface-container-lowest text-on-surface font-label-status text-label-status shadow-[0_1px_2px_rgba(0,0,0,0.05)]" title="Lab Daylight"><span class="material-symbols-outlined text-[14px]">light_mode</span><span class="hidden 2xl:inline">Daylight</span></button><button class="flex items-center gap-1 px-space-xs py-0.5 rounded text-on-surface-variant hover:text-on-surface font-label-status text-label-status transition-colors" title="Deep Bench"><span class="material-symbols-outlined text-[14px]">dark_mode</span><span class="hidden 2xl:inline">Deep Bench</span></button></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="flex flex-col text-right hidden sm:block"><span class="font-body-sm text-body-sm font-semibold text-on-surface leading-tight">Dr. Elena Rostova</span><span class="font-label-status text-label-status text-secondary leading-tight">Lead Investigator (Researcher/Supervisor)</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="relative pt-16 w-full bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Bench Banner (Sticky Instrument Bar) -->
+<header class="sticky top-0 z-30 flex flex-wrap items-center justify-between gap-space-md bg-surface-container-lowest px-space-lg py-space-md shadow-sm">
+<!-- Left: Protocol Context -->
+<div class="flex items-center gap-space-md min-w-0">
+<div class="flex items-center gap-space-xs px-space-md py-1.5 rounded-lg bg-primary text-on-primary shadow-sm">
+<span class="material-symbols-outlined text-[20px] animate-pulse">precision_manufacturing</span>
+<span class="font-label-status text-label-status tracking-widest uppercase">Digital Bench Mode</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-code text-label-code font-bold text-primary">SOP-GEN-v3.2</span>
+<span class="font-label-status text-label-status text-outline">/</span>
+<span class="font-label-code text-label-code text-secondary">EXP-2026-0884</span>
+<span class="px-space-xs py-0.5 rounded bg-tertiary/10 font-label-status text-label-status text-tertiary font-bold ml-1">v3.2 LOCKED</span>
+</div>
+<span class="font-headline-md text-headline-md text-on-surface truncate">CRISPR-Cas9 In Vitro Cleavage Protocol</span>
+</div>
+</div>
+<!-- Center: Glove-Friendly Live Reaction Timer -->
+<div class="flex items-center gap-space-md bg-surface-container px-space-lg py-space-xs rounded-xl shadow-inner">
+<div class="flex flex-col items-center">
+<span class="font-label-status text-label-status text-secondary uppercase tracking-widest">Incubation Countdown</span>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-label-code text-[38px] leading-none font-bold text-primary tracking-tight" id="benchTimerDisplay">14:22</span>
+<span class="font-label-data-sm text-label-data-sm text-outline uppercase font-semibold">rem</span>
+</div>
+</div>
+<div class="h-8 w-px bg-outline-variant/30"></div>
+<div class="flex items-center gap-space-xs">
+<button class="h-11 px-space-md bg-surface-container-lowest hover:bg-surface-container-high active:scale-95 text-on-surface rounded-lg font-label-code text-label-code font-semibold shadow-sm transition-all" id="add1mBtn" title="Add 1 minute">+1m</button>
+<button class="h-11 px-space-md bg-surface-container-lowest hover:bg-surface-container-high active:scale-95 text-on-surface rounded-lg font-label-code text-label-code font-semibold shadow-sm transition-all" id="add5mBtn" title="Add 5 minutes">+5m</button>
+<button class="h-11 w-11 flex items-center justify-center bg-primary hover:bg-primary-container active:scale-95 text-on-primary rounded-lg shadow-sm transition-all" id="toggleTimerBtn" title="Pause / Resume">
+<span class="material-symbols-outlined text-[22px]" id="timerIcon">pause</span>
+</button>
+<button class="h-11 w-11 flex items-center justify-center bg-surface-container-lowest hover:bg-surface-container-high active:scale-95 text-secondary rounded-lg shadow-sm transition-all" id="resetTimerBtn" title="Reset to 15:00">
+<span class="material-symbols-outlined text-[20px]">restart_alt</span>
+</button>
+</div>
+</div>
+<!-- Right: Telemetry & Safe Exit -->
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg bg-surface-container font-label-status text-label-status text-on-surface">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-tertiary"></span>
+</span>
+<span class="font-semibold text-tertiary">Bench Stream Synced</span>
+</div>
+<button class="h-11 w-11 flex items-center justify-center rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface active:scale-95 shadow-sm transition-colors" id="audioToggleBtn" title="Toggle bench sound alerts">
+<span class="material-symbols-outlined text-[20px]" id="audioIcon">volume_up</span>
+</button>
+<button class="h-11 px-space-md flex items-center gap-space-xs rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface active:scale-95 font-body-sm text-body-sm font-semibold transition-colors">
+<span class="material-symbols-outlined text-[18px]">open_in_new</span>
+<span class="hidden lg:inline">Exit Bench Mode</span>
+</button>
+</div>
+</header>
+<!-- Main Canvas Grid: Split into Workflow Navigation + Active Execution Hood Area -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg p-space-lg w-full max-w-[1920px] mx-auto">
+<!-- Left Column: Step Navigation Rail (Strict GLP Sequence) -->
+<section class="xl:col-span-4 flex flex-col gap-space-md">
+<!-- Rail Header -->
+<div class="flex items-center justify-between bg-surface-container-lowest p-space-md rounded-xl shadow-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">format_list_numbered</span>
+<span class="font-headline-md text-headline-md text-on-surface">Sequence Execution</span>
+</div>
+<div class="flex items-center gap-space-xs font-label-status text-label-status px-space-sm py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-bold">
+          STEP 04 / 08
+        </div>
+</div>
+<!-- Execution Progress Track -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-xs">
+<div class="flex justify-between items-center mb-space-xs">
+<span class="font-label-status text-label-status text-secondary uppercase">Cumulative Completion</span>
+<span class="font-label-code text-label-code font-bold text-primary">50%</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="bg-primary h-full rounded-full transition-all duration-500" style="width: 50%;"></div>
+</div>
+</div>
+<!-- Linear Step Sequence Cards -->
+<div class="flex flex-col gap-space-xs overflow-y-auto max-h-[calc(100vh-280px)] pr-space-xs">
+<!-- Step 01 (Completed) -->
+<div class="flex items-start gap-space-md p-space-md rounded-xl bg-surface-container-low transition-all">
+<div class="flex-shrink-0 w-8 h-8 rounded-lg bg-tertiary text-on-tertiary flex items-center justify-center font-label-code text-label-code font-bold">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<span class="font-label-status text-label-status text-tertiary uppercase font-bold">Step 01 · Executed</span>
+<span class="font-label-data-sm text-label-data-sm text-outline">09:15 UTC</span>
+</div>
+<span class="font-body-md text-body-md text-on-surface font-semibold truncate">Reagent Thawing &amp; Master Mix Prep</span>
+<span class="font-label-data-sm text-label-data-sm text-secondary truncate">Lot: CAS9-PUR-992 · Thaw on wet ice bath</span>
+</div>
+</div>
+<!-- Step 02 (Completed) -->
+<div class="flex items-start gap-space-md p-space-md rounded-xl bg-surface-container-low transition-all">
+<div class="flex-shrink-0 w-8 h-8 rounded-lg bg-tertiary text-on-tertiary flex items-center justify-center font-label-code text-label-code font-bold">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<span class="font-label-status text-label-status text-tertiary uppercase font-bold">Step 02 · Executed</span>
+<span class="font-label-data-sm text-label-data-sm text-outline">09:40 UTC</span>
+</div>
+<span class="font-body-md text-body-md text-on-surface font-semibold truncate">sgRNA Assembly &amp; OD Check</span>
+<span class="font-label-data-sm text-label-data-sm text-secondary truncate">A260/A280: 1.98 · Standard conformance verified</span>
+</div>
+</div>
+<!-- Step 03 (Completed) -->
+<div class="flex items-start gap-space-md p-space-md rounded-xl bg-surface-container-low transition-all">
+<div class="flex-shrink-0 w-8 h-8 rounded-lg bg-tertiary text-on-tertiary flex items-center justify-center font-label-code text-label-code font-bold">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<span class="font-label-status text-label-status text-tertiary uppercase font-bold">Step 03 · Executed</span>
+<span class="font-label-data-sm text-label-data-sm text-outline">10:15 UTC</span>
+</div>
+<span class="font-body-md text-body-md text-on-surface font-semibold truncate">Substrate DNA Cleavage Setup</span>
+<span class="font-label-data-sm text-label-data-sm text-secondary truncate">pUC19 Target linearized · 300ng aliquots</span>
+</div>
+</div>
+<!-- Step 04 (ACTIVE BENCH SPOTLIGHT) -->
+<div class="flex items-start gap-space-md p-space-md rounded-xl bg-surface-container-lowest shadow-md transition-all relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-primary"></div>
+<div class="flex-shrink-0 w-8 h-8 rounded-lg bg-primary text-on-primary flex items-center justify-center font-label-code text-label-code font-bold shadow-sm">
+            04
+          </div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<span class="font-label-status text-label-status text-primary uppercase font-bold flex items-center gap-1">
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span>
+                Active Bench Gate
+              </span>
+<span class="font-label-code text-label-code font-bold text-primary">IN PROGRESS</span>
+</div>
+<span class="font-body-md text-body-md text-on-surface font-bold truncate">Thermal Incubation &amp; Reaction Quench</span>
+<span class="font-label-data-sm text-label-data-sm text-primary font-medium truncate">Thermo-cycler Block B-04 · 37.0 °C target</span>
+</div>
+</div>
+<!-- Step 05 (Upcoming / Sequential Lock) -->
+<div class="flex items-start gap-space-md p-space-md rounded-xl bg-surface-container-lowest/60 opacity-75">
+<div class="flex-shrink-0 w-8 h-8 rounded-lg bg-surface-container text-outline flex items-center justify-center font-label-code text-label-code">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<span class="font-label-status text-label-status text-outline uppercase font-semibold">Step 05 · Pending</span>
+</div>
+<span class="font-body-md text-body-md text-secondary font-medium truncate">Agarose Gel Electrophoresis Loading</span>
+<span class="font-label-data-sm text-label-data-sm text-outline truncate">Precast 1.5% Agarose Gel w/ 1X TBE</span>
+</div>
+</div>
+<!-- Step 06 (Upcoming) -->
+<div class="flex items-start gap-space-md p-space-md rounded-xl bg-surface-container-lowest/60 opacity-60">
+<div class="flex-shrink-0 w-8 h-8 rounded-lg bg-surface-container text-outline flex items-center justify-center font-label-code text-label-code">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<span class="font-label-status text-label-status text-outline uppercase font-semibold">Step 06 · Pending</span>
+<span class="font-body-md text-body-md text-secondary truncate">SYBR Safe Staining &amp; Optical Imaging</span>
+</div>
+</div>
+<!-- Step 07 (Upcoming) -->
+<div class="flex items-start gap-space-md p-space-md rounded-xl bg-surface-container-lowest/60 opacity-60">
+<div class="flex-shrink-0 w-8 h-8 rounded-lg bg-surface-container text-outline flex items-center justify-center font-label-code text-label-code">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<span class="font-label-status text-label-status text-outline uppercase font-semibold">Step 07 · Pending</span>
+<span class="font-body-md text-body-md text-secondary truncate">ImageJ Band Optical Densitometry</span>
+</div>
+</div>
+<!-- Step 08 (Upcoming) -->
+<div class="flex items-start gap-space-md p-space-md rounded-xl bg-surface-container-lowest/60 opacity-60">
+<div class="flex-shrink-0 w-8 h-8 rounded-lg bg-surface-container text-outline flex items-center justify-center font-label-code text-label-code">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<span class="font-label-status text-label-status text-outline uppercase font-semibold">Step 08 · Pending</span>
+<span class="font-body-md text-body-md text-secondary truncate">Cleanup &amp; Hazardous Waste Neutralization</span>
+</div>
+</div>
+</div>
+<!-- Quick Bench Equipment Sensor Telemetry Card -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-sm mt-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-status text-label-status text-secondary uppercase font-semibold">Paired Apparatus</span>
+<span class="font-label-status text-label-status text-tertiary flex items-center gap-1 font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> LIVE TELEMETRY
+          </span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col">
+<span class="font-label-status text-label-status text-secondary">ThermoMixer B-04</span>
+<span class="font-label-code text-label-code font-bold text-on-surface text-[15px]">37.1 °C</span>
+<span class="font-label-data-sm text-label-data-sm text-tertiary">Target 37.0 (±0.2)</span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col">
+<span class="font-label-status text-label-status text-secondary">Eppendorf 5424R</span>
+<span class="font-label-code text-label-code font-bold text-on-surface text-[15px]">STANDBY</span>
+<span class="font-label-data-sm text-label-data-sm text-secondary">Rotor FA-45-24</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Right Column: Main Active Step Spotlight & Action Center -->
+<main class="xl:col-span-8 flex flex-col gap-space-lg">
+<!-- Prominent Amber Hazard / Safety Alert Banner -->
+<div class="bg-error-container text-on-error-container p-space-md rounded-xl shadow-sm flex items-start gap-space-md">
+<div class="flex-shrink-0 w-10 h-10 rounded-lg bg-error text-on-error flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[24px]">warning</span>
+</div>
+<div class="flex flex-col flex-1">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-status text-label-status font-bold uppercase tracking-wider text-error">CRITICAL SAFETY PRECAUTION · GLP SEC-04</span>
+<span class="px-space-xs py-0.5 rounded bg-error/15 font-label-status text-label-status text-error font-semibold">CHEMICAL / THERMAL</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface mt-1 font-medium leading-relaxed">
+            High thermal block temperature (<strong class="font-semibold text-error">37.0 °C</strong>). Wear heat-resistant cryo-gloves when handling block inserts. Quench reagent contains <strong class="font-semibold">250mM EDTA</strong> (Skin/eye irritant). Eye protection mandatory.
+          </p>
+</div>
+<div class="hidden sm:flex flex-col items-end gap-1 flex-shrink-0">
+<span class="px-space-sm py-1 rounded bg-surface-container-lowest font-label-code text-label-code font-bold text-error">MSDS #9941</span>
+<span class="font-label-data-sm text-label-data-sm text-secondary">PPE Level 2</span>
+</div>
+</div>
+<!-- Execution Panel: Active Step Procedure Details -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-lg">
+<!-- Step Header with Visual Apparatus Badge -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md pb-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-status text-label-status text-primary uppercase font-bold tracking-widest">CURRENT ACTIVE STEP</span>
+<span class="text-outline-variant">•</span>
+<span class="font-label-data-sm text-label-data-sm text-secondary">Estimated duration: 15 min</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface mt-1">STEP 04: Thermal Incubation &amp; Kinetic Reaction Quench</h1>
+</div>
+<div class="flex items-center gap-space-sm flex-shrink-0">
+<span class="font-label-status text-label-status text-secondary bg-surface-container px-space-sm py-1.5 rounded-lg flex items-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-[16px]">science</span> Block: B-04 (Slot 1-8)
+            </span>
+<span class="font-label-status text-label-status text-secondary bg-surface-container px-space-sm py-1.5 rounded-lg flex items-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-[16px]">qr_code_2</span> Lot: STP-6X-4009
+            </span>
+</div>
+</div>
+<!-- Visual Bench Graphic / Specimen Strip Illustration -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Tactile Step 1 -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-code text-label-code font-bold">1</span>
+<span class="font-label-status text-label-status text-secondary uppercase font-semibold">Block Load</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-normal">
+              Place the <strong>0.2 mL PCR tube strip</strong> containing Cas9/sgRNA ribonucleoprotein complexes into the pre-heated thermo-cycler block (Set to <strong>37.0 °C</strong>).
+            </p>
+<div class="mt-space-md pt-space-xs flex items-center gap-1 text-secondary font-label-data-sm text-label-data-sm">
+<span class="material-symbols-outlined text-[16px] text-tertiary">check_circle</span> Verified pre-heat to 37.0°C
+            </div>
+</div>
+<!-- Tactile Step 2 -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-code text-label-code font-bold">2</span>
+<span class="font-label-status text-label-status text-primary uppercase font-bold">Quench Critical</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-normal">
+              At exactly <strong>t = 15:00 min</strong>, remove Strip #2 and immediately pipette <strong>5.0 µL of 6X Stop Solution</strong> into tubes <strong>A1 through H1</strong>.
+            </p>
+<div class="mt-space-md pt-space-xs flex items-center gap-1 text-primary font-label-data-sm text-label-data-sm font-semibold">
+<span class="material-symbols-outlined text-[16px]">timer</span> Strict t-window: ±15 sec
+            </div>
+</div>
+<!-- Tactile Step 3 -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-code text-label-code font-bold">3</span>
+<span class="font-label-status text-label-status text-secondary uppercase font-semibold">Homogenize</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-normal">
+              Vortex briefly for <strong>3 seconds</strong> and pulse spin at <strong>2,000 x g</strong> in bench micro-centrifuge to collect liquid at bottom.
+            </p>
+<div class="mt-space-md pt-space-xs flex items-center gap-1 text-secondary font-label-data-sm text-label-data-sm">
+<span class="material-symbols-outlined text-[16px]">motion_photos_on</span> Ensure strip cap seal is seated
+            </div>
+</div>
+</div>
+<!-- Tactile Quick Measurement Capture Box (Glove-Friendly Touch Input) -->
+<div class="bg-surface-container p-space-lg rounded-xl shadow-inner flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">edit_note</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Bench Measurement &amp; Verification Gate</h2>
+</div>
+<span class="font-label-status text-label-status text-secondary uppercase font-semibold">Glove-Optimized Fields</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Measurement 1: Actual Quench Time -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-code text-label-code font-semibold text-on-surface flex items-center justify-between" for="actualQuenchTime">
+<span>ACTUAL QUENCH TIME (t)</span>
+<span class="font-label-data-sm text-label-data-sm text-secondary">Nominal: 15:00 min</span>
+</label>
+<div class="relative flex items-center">
+<input class="w-full h-14 pl-space-md pr-16 bg-surface-container-lowest text-on-surface font-label-code text-[20px] font-bold rounded-lg focus:outline-none focus:ring-2 focus:ring-primary shadow-sm" id="actualQuenchTime" type="text" value="15:02"/>
+<span class="absolute right-4 font-label-code text-label-code font-bold text-outline">min</span>
+</div>
+<span class="font-label-data-sm text-label-data-sm text-tertiary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check</span> In-tolerance deviation: +00:02 (Within ±00:15 GLP spec)
+              </span>
+</div>
+<!-- Measurement 2: Thermal Verification -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-code text-label-code font-semibold text-on-surface flex items-center justify-between" for="actualTemp">
+<span>VERIFIED THERMAL BLOCK TEMP</span>
+<span class="font-label-data-sm text-label-data-sm text-secondary">Nominal: 37.0 °C</span>
+</label>
+<div class="relative flex items-center">
+<input class="w-full h-14 pl-space-md pr-16 bg-surface-container-lowest text-on-surface font-label-code text-[20px] font-bold rounded-lg focus:outline-none focus:ring-2 focus:ring-primary shadow-sm" id="actualTemp" type="text" value="37.1"/>
+<span class="absolute right-4 font-label-code text-label-code font-bold text-outline">°C</span>
+</div>
+<span class="font-label-data-sm text-label-data-sm text-tertiary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">sensors</span> Auto-synced from ThermoMixer sensor B-04
+              </span>
+</div>
+</div>
+<!-- Bench Observation Note -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-code text-label-code font-semibold text-on-surface flex items-center justify-between" for="obsNotes">
+<span>BENCH OBSERVATION &amp; OPTICAL INTEGRITY</span>
+<span class="font-label-data-sm text-label-data-sm text-secondary">Mandatory Entry</span>
+</label>
+<input class="w-full h-14 px-space-md bg-surface-container-lowest text-on-surface font-body-md text-body-md font-medium rounded-lg focus:outline-none focus:ring-2 focus:ring-primary shadow-sm" id="obsNotes" type="text" value="Reaction quenched cleanly; no precipitation observed in strips A1-H1. Clear optical transmittance."/>
+</div>
+<!-- Micro Specimen Visualizer / Tube Matrix Status -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<span class="font-label-status text-label-status text-secondary uppercase font-semibold">TUBE STRIP CONFIRMATION MATRIX (STRIP #2: A1-H1)</span>
+<div class="grid grid-cols-8 gap-space-xs text-center">
+<div class="p-2 rounded bg-tertiary/15 text-tertiary font-label-code text-label-code font-bold flex flex-col items-center">
+<span>A1</span>
+<span class="material-symbols-outlined text-[14px]">done</span>
+</div>
+<div class="p-2 rounded bg-tertiary/15 text-tertiary font-label-code text-label-code font-bold flex flex-col items-center">
+<span>B1</span>
+<span class="material-symbols-outlined text-[14px]">done</span>
+</div>
+<div class="p-2 rounded bg-tertiary/15 text-tertiary font-label-code text-label-code font-bold flex flex-col items-center">
+<span>C1</span>
+<span class="material-symbols-outlined text-[14px]">done</span>
+</div>
+<div class="p-2 rounded bg-tertiary/15 text-tertiary font-label-code text-label-code font-bold flex flex-col items-center">
+<span>D1</span>
+<span class="material-symbols-outlined text-[14px]">done</span>
+</div>
+<div class="p-2 rounded bg-tertiary/15 text-tertiary font-label-code text-label-code font-bold flex flex-col items-center">
+<span>E1</span>
+<span class="material-symbols-outlined text-[14px]">done</span>
+</div>
+<div class="p-2 rounded bg-tertiary/15 text-tertiary font-label-code text-label-code font-bold flex flex-col items-center">
+<span>F1</span>
+<span class="material-symbols-outlined text-[14px]">done</span>
+</div>
+<div class="p-2 rounded bg-tertiary/15 text-tertiary font-label-code text-label-code font-bold flex flex-col items-center">
+<span>G1</span>
+<span class="material-symbols-outlined text-[14px]">done</span>
+</div>
+<div class="p-2 rounded bg-tertiary/15 text-tertiary font-label-code text-label-code font-bold flex flex-col items-center">
+<span>H1</span>
+<span class="material-symbols-outlined text-[14px]">done</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Primary Bench Execution Actions (Huge Touch Targets for Nitrile Gloves) -->
+<div class="flex flex-col sm:flex-row items-stretch gap-space-md pt-space-xs">
+<!-- Primary: Confirm & Advance -->
+<button class="flex-1 h-16 px-space-xl bg-primary hover:bg-primary-container active:scale-[0.99] text-on-primary rounded-xl font-headline-md text-headline-md font-bold flex items-center justify-center gap-space-md shadow-md transition-all" id="confirmStepBtn">
+<span>Confirm Step &amp; Proceed to Step 05</span>
+<span class="material-symbols-outlined text-[26px]">arrow_forward</span>
+</button>
+<!-- Secondary: Log Deviation / Skip Step -->
+<button class="h-16 px-space-lg bg-surface-container hover:bg-surface-container-high active:scale-[0.99] text-on-surface rounded-xl font-body-md text-body-md font-semibold flex items-center justify-center gap-space-xs shadow-sm transition-all flex-shrink-0" id="openDeviationBtn">
+<span class="material-symbols-outlined text-[20px] text-error">report_problem</span>
+<span>Log Procedural Deviation</span>
+</button>
+</div>
+</div>
+<!-- GLP Procedural Deviation Drawer / Panel (Expandable Collapsible Section) -->
+<section class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-md transition-all" id="deviationDrawer">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-outline text-[20px]">policy</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">GLP Procedural Deviation Governance</h3>
+</div>
+<span class="font-label-status text-label-status text-secondary bg-surface-container px-space-xs py-0.5 rounded">21 CFR Part 11 Rule</span>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-lg flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-[20px] text-primary flex-shrink-0">info</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+<strong class="text-on-surface font-semibold">Immutable Protocol Notice:</strong> SOP-GEN-v3.2 is locked against ad-hoc inline edits. Any manual timing variations, substitution of EDTA concentrations, or thermal anomalies must be documented below. They will be cryptographically signed by <strong class="text-on-surface font-semibold">Dr. Elena Rostova</strong> and permanently appended to audit log of <strong>EXP-2026-0884</strong>.
+          </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-space-sm">
+<label class="flex items-center gap-space-xs p-space-md bg-surface-container rounded-lg cursor-pointer hover:bg-surface-container-high transition-colors">
+<input class="w-4 h-4 text-primary focus:ring-0" name="devReason" type="radio" value="reagent"/>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Reagent Substitution</span>
+</label>
+<label class="flex items-center gap-space-xs p-space-md bg-surface-container rounded-lg cursor-pointer hover:bg-surface-container-high transition-colors">
+<input checked="" class="w-4 h-4 text-primary focus:ring-0" name="devReason" type="radio" value="timing"/>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Timing Anomaly</span>
+</label>
+<label class="flex items-center gap-space-xs p-space-md bg-surface-container rounded-lg cursor-pointer hover:bg-surface-container-high transition-colors">
+<input class="w-4 h-4 text-primary focus:ring-0" name="devReason" type="radio" value="equipment"/>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Equipment Variation</span>
+</label>
+<label class="flex items-center gap-space-xs p-space-md bg-surface-container rounded-lg cursor-pointer hover:bg-surface-container-high transition-colors">
+<input class="w-4 h-4 text-primary focus:ring-0" name="devReason" type="radio" value="volume"/>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Volume Adjustment</span>
+</label>
+</div>
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-md pt-space-xs">
+<div class="flex items-center gap-space-xs text-secondary font-label-data-sm text-label-data-sm">
+<span class="material-symbols-outlined text-[16px] text-tertiary">key</span>
+<span>Ed25519 signature ready · Hash chain: 0x8F4A...B901</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="h-10 px-space-md rounded-lg bg-surface-container hover:bg-surface-container-high font-body-sm text-body-sm font-semibold text-secondary transition-colors">
+              Dismiss Drawer
+            </button>
+<button class="h-10 px-space-md rounded-lg bg-primary hover:bg-primary-container text-on-primary font-body-sm text-body-sm font-semibold flex items-center gap-space-xs shadow-sm transition-colors">
+<span class="material-symbols-outlined text-[16px]">draw</span>
+<span>Sign &amp; Attach Deviation</span>
+</button>
+</div>
+</div>
+</section>
+</main>
+</div>
+<!-- Bench Quick Audio & Timer Script -->
+<script>
+    (() => {
+      let remainingSeconds = 14 * 60 + 22;
+      let isRunning = true;
+      let timerInterval = null;
+
+      const display = document.getElementById('benchTimerDisplay');
+      const toggleBtn = document.getElementById('toggleTimerBtn');
+      const timerIcon = document.getElementById('timerIcon');
+      const add1mBtn = document.getElementById('add1mBtn');
+      const add5mBtn = document.getElementById('add5mBtn');
+      const resetBtn = document.getElementById('resetTimerBtn');
+      const audioBtn = document.getElementById('audioToggleBtn');
+      const audioIcon = document.getElementById('audioIcon');
+      const confirmBtn = document.getElementById('confirmStepBtn');
+      const openDevBtn = document.getElementById('openDeviationBtn');
+      const devDrawer = document.getElementById('deviationDrawer');
+
+      let audioEnabled = true;
+
+      function renderTime() {
+        const m = Math.floor(remainingSeconds / 60);
+        const s = remainingSeconds % 60;
+        display.textContent = `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+      }
+
+      function startTimer() {
+        if (timerInterval) clearInterval(timerInterval);
+        timerInterval = setInterval(() => {
+          if (remainingSeconds > 0) {
+            remainingSeconds--;
+            renderTime();
+          } else {
+            clearInterval(timerInterval);
+            isRunning = false;
+            timerIcon.textContent = 'play_arrow';
+            display.classList.add('text-error');
+          }
+        }, 1000);
+      }
+
+      function toggleTimer() {
+        if (isRunning) {
+          clearInterval(timerInterval);
+          isRunning = false;
+          timerIcon.textContent = 'play_arrow';
+        } else {
+          isRunning = true;
+          timerIcon.textContent = 'pause';
+          display.classList.remove('text-error');
+          startTimer();
+        }
+      }
+
+      toggleBtn.addEventListener('click', toggleTimer);
+
+      add1mBtn.addEventListener('click', () => {
+        remainingSeconds += 60;
+        renderTime();
+      });
+
+      add5mBtn.addEventListener('click', () => {
+        remainingSeconds += 300;
+        renderTime();
+      });
+
+      resetBtn.addEventListener('click', () => {
+        remainingSeconds = 15 * 60;
+        renderTime();
+        display.classList.remove('text-error');
+      });
+
+      audioBtn.addEventListener('click', () => {
+        audioEnabled = !audioEnabled;
+        audioIcon.textContent = audioEnabled ? 'volume_up' : 'volume_off';
+      });
+
+      openDevBtn.addEventListener('click', () => {
+        devDrawer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        devDrawer.classList.toggle('ring-2');
+        devDrawer.classList.toggle('ring-primary');
+        setTimeout(() => {
+          devDrawer.classList.remove('ring-2', 'ring-primary');
+        }, 1500);
+      });
+
+      confirmBtn.addEventListener('click', () => {
+        confirmBtn.innerHTML = `
+          <span class="material-symbols-outlined text-[24px] animate-spin">refresh</span>
+          <span>Locking Step 04 & Transferring Telemetry...</span>
+        `;
+        setTimeout(() => {
+          confirmBtn.innerHTML = `
+            <span class="material-symbols-outlined text-[24px]">verified</span>
+            <span>Step 04 Locked · Step 05 Ready</span>
+          `;
+          confirmBtn.classList.replace('bg-primary', 'bg-tertiary');
+        }, 800);
+      });
+
+      startTimer();
+    })();
+  </script>
+</div></main></div></body></html>

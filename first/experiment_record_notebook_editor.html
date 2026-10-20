@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-primary-fixed": "#00174b", "outline-variant": "#c3c6d7", "inverse-primary": "#b4c5ff", "on-tertiary-fixed": "#002114", "tertiary-fixed": "#85f8c4", "secondary": "#515f74", "on-secondary-fixed-variant": "#3a485b", "surface-container-lowest": "#ffffff", "on-tertiary-container": "#bdffdc", "secondary-container": "#d5e3fc", "secondary-fixed": "#d5e3fc", "on-secondary-container": "#57657a", "on-secondary": "#ffffff", "primary-fixed": "#dbe1ff", "surface-variant": "#dae2fd", "surface-container-low": "#f2f3ff", "on-tertiary-fixed-variant": "#005137", "on-surface": "#131b2e", "secondary-fixed-dim": "#b9c7df", "surface-container": "#eaedff", "on-primary": "#ffffff", "surface-container-high": "#e2e7ff", "inverse-on-surface": "#eef0ff", "primary": "#004ac6", "surface-tint": "#0053db", "surface-bright": "#faf8ff", "primary-fixed-dim": "#b4c5ff", "on-secondary-fixed": "#0d1c2e", "error": "#ba1a1a", "tertiary-container": "#007d57", "on-tertiary": "#ffffff", "inverse-surface": "#283044", "tertiary": "#006243", "error-container": "#ffdad6", "on-error": "#ffffff", "on-primary-fixed-variant": "#003ea8", "on-surface-variant": "#434655", "on-background": "#131b2e", "primary-container": "#2563eb", "surface-dim": "#d2d9f4", "background": "#faf8ff", "surface": "#faf8ff", "on-error-container": "#93000a", "tertiary-fixed-dim": "#68dba9", "outline": "#737686", "on-primary-container": "#eeefff", "surface-container-highest": "#dae2fd" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "margin-mobile": "1rem", "space-xl": "2rem", "gutter": "1rem", "space-sm": "0.5rem", "gutter-dense": "0.5rem", "space-xs": "0.25rem", "margin": "1.5rem", "space-lg": "1.25rem", "space-md": "0.75rem" }, "fontFamily": { "body-sm": ["Inter"], "body-md": ["Inter"], "headline-md": ["Inter"], "headline-lg": ["Inter"], "headline-xl": ["Inter"], "label-status": ["JetBrains Mono"], "label-code": ["JetBrains Mono"], "body-lg": ["Inter"], "headline-xl-mobile": ["Inter"], "label-data-sm": ["JetBrains Mono"] }, "fontSize": { "body-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.005em", "fontWeight": "400"}], "body-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400"}], "headline-md": ["18px", {"lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600"}], "headline-lg": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600"}], "headline-xl": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600"}], "label-status": ["10px", {"lineHeight": "12px", "letterSpacing": "0.06em", "fontWeight": "600"}], "label-code": ["13px", {"lineHeight": "18px", "letterSpacing": "-0.01em", "fontWeight": "500"}], "body-lg": ["16px", {"lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400"}], "headline-xl-mobile": ["26px", {"lineHeight": "34px", "letterSpacing": "-0.015em", "fontWeight": "600"}], "label-data-sm": ["11px", {"lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "500"}] } } } }</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col h-[calc(100vh-140px)]"><div class="h-16 px-space-lg flex items-center gap-space-sm bg-surface-container-low"><img alt="Anavix Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WonhjdbkuMtjootcG_Ws8SmwAVxhqup6aSQBce_Ts08YLe5fp5PbbJjsL1u2fA_6pcXvxmXlk2LlxpgyRQO8u_c_K4xBgbjmdn-8mKmQ7glrHt0CHTorkbLZwbtCH8hMgv8EoYTA4LSxDiKEybXt3RnOJmIstsEjukk2PapLL6jGw7HJjWpcAQPNyYOcb9G4tbzv4KgrxxFRVcyiKjCfdgmdqQxdPW4Jt9KqTxdnJR_0pS_eEkbyazcrw"/><div class="flex flex-col"><span class="font-headline-md text-headline-md text-on-surface tracking-tight uppercase leading-none">ANAVIX</span><span class="font-label-status text-label-status text-secondary tracking-widest uppercase mt-space-xs">Electronic Lab Notebook</span></div></div><div class="flex-1 overflow-y-auto px-space-md py-space-sm space-y-space-lg"><div class="space-y-space-xs"><div class="px-space-sm py-space-xs font-label-status text-label-status text-secondary uppercase tracking-wider">RESEARCH SPACE</div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="my-work" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span>My Work</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm transition-colors bg-primary-container text-on-primary-container font-semibold rounded-lg" data-path="experiment-editor" href="#"><span class="material-symbols-outlined text-[20px]">science</span><span>Notebook &amp; Experiments</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="digital-bench" href="#"><span class="material-symbols-outlined text-[20px]">timer</span><span>Digital Bench</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="protocol-library" href="#"><span class="material-symbols-outlined text-[20px]">menu_book</span><span>Protocol Library</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="calculators" href="#"><span class="material-symbols-outlined text-[20px]">calculate</span><span>Calculators</span></a></nav></div><div class="space-y-space-xs"><div class="px-space-sm py-space-xs font-label-status text-label-status text-secondary uppercase tracking-wider">SCIENTIFIC GOVERNANCE</div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="review-queue" href="#"><span class="material-symbols-outlined text-[20px]">verified</span><span>Review &amp; Approvals</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="audit-provenance" href="#"><span class="material-symbols-outlined text-[20px]">history_edu</span><span>Audit &amp; Provenance</span></a></nav></div><div class="space-y-space-xs"><div class="px-space-sm py-space-xs font-label-status text-label-status text-secondary uppercase tracking-wider">LAB OPERATIONS (UNIVERSITY LAB)</div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="inventory-reagents" href="#"><span class="material-symbols-outlined text-[20px]">inventory_2</span><span>Inventory &amp; Reagents</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="equipment-scheduling" href="#"><span class="material-symbols-outlined text-[20px]">calendar_month</span><span>Equipment Scheduling</span></a></nav></div></div></div><div class="p-space-md bg-surface-container-low flex flex-col gap-space-sm"><button class="w-full flex items-center justify-center gap-space-xs bg-primary hover:bg-primary-container text-on-primary py-space-sm px-space-md rounded-lg font-body-md text-body-md font-semibold transition-colors"><span class="material-symbols-outlined text-[18px]">add</span><span>New Experiment</span></button><div class="flex items-center justify-between px-space-xs pt-space-xs"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[14px] text-tertiary">verified_user</span><span class="font-label-status text-label-status text-secondary">HIPAA &amp; GLP Ready</span></div><span class="font-label-status text-label-status text-secondary bg-surface-container px-space-xs py-0.5 rounded">ISO 17025</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md flex-1 max-w-2xl"><div class="relative w-full max-w-md"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[18px]">search</span><input class="w-full pl-9 pr-space-md py-1.5 bg-surface-container-lowest text-on-surface placeholder:text-outline font-body-sm text-body-sm rounded-lg focus:outline-none focus:ring-1 focus:ring-primary" placeholder="Search experiments, protocols, lot numbers, reagents... ⌘K" type="text"/></div><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container-low font-label-data-sm text-label-data-sm text-secondary"><span class="material-symbols-outlined text-[14px] text-secondary">home_work</span><span>Current Lab: <strong class="text-on-surface font-semibold">BioMolecular Core A</strong> · Team: <strong class="text-on-surface font-semibold">Oncology Therapeutics</strong></span></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-sm py-1 bg-surface-container-lowest rounded-full shadow-[0_1px_4px_rgba(0,0,0,0.02)]"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-tertiary"></span></span><span class="font-label-status text-label-status text-on-surface">Autosave: Synced 14:32 UTC (Local buffer: 0)</span></div><div class="flex items-center bg-surface-container-low p-0.5 rounded-lg"><button class="flex items-center gap-1 px-space-xs py-0.5 rounded bg-surface-container-lowest text-on-surface font-label-status text-label-status shadow-[0_1px_2px_rgba(0,0,0,0.05)]" title="Lab Daylight"><span class="material-symbols-outlined text-[14px]">light_mode</span><span class="hidden 2xl:inline">Daylight</span></button><button class="flex items-center gap-1 px-space-xs py-0.5 rounded text-on-surface-variant hover:text-on-surface font-label-status text-label-status transition-colors" title="Deep Bench"><span class="material-symbols-outlined text-[14px]">dark_mode</span><span class="hidden 2xl:inline">Deep Bench</span></button></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="flex flex-col text-right hidden sm:block"><span class="font-body-sm text-body-sm font-semibold text-on-surface leading-tight">Dr. Elena Rostova</span><span class="font-label-status text-label-status text-secondary leading-tight">Lead Investigator (Researcher/Supervisor)</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="relative pt-16 w-full bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Experiment Header & Metadata Bar -->
+<header class="bg-surface-container-lowest px-space-lg py-space-md shadow-sm relative z-20">
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-md">
+<!-- Title, Badges, Identifiers -->
+<div class="space-y-space-xs min-w-0">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="font-label-status text-label-status px-2 py-0.5 rounded bg-primary-container text-on-primary-container tracking-wider uppercase">
+            Active · In-Progress
+          </span>
+<span class="font-label-data-sm text-label-data-sm px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-medium">
+            EXP-2026-0884
+          </span>
+<span class="font-label-data-sm text-label-data-sm px-2 py-0.5 rounded bg-surface-container text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-tertiary">lock</span>
+            SOP-GEN-v3.2 (Approved Sep 2026)
+          </span>
+<span class="font-label-status text-label-status text-secondary bg-surface-container-high px-2 py-0.5 rounded">
+            Rev 4 (Draft)
+          </span>
+</div>
+<div class="flex items-baseline gap-space-sm">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight truncate">
+            CRISPR Cas9 On-Target Cleavage Kinetics
+          </h1>
+<span class="font-body-sm text-body-sm text-secondary hidden md:inline">
+            Project: <strong class="text-on-surface font-semibold">Oncology Therapeutics</strong> · BioMolecular Core A
+          </span>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex items-center gap-space-xs shrink-0">
+<button class="px-space-sm py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-body-sm text-body-sm flex items-center gap-1.5 transition-colors" title="Export tamper-evident laboratory archive">
+<span class="material-symbols-outlined text-[16px]">picture_as_pdf</span>
+<span class="hidden sm:inline">Export PDF</span>
+</button>
+<button class="px-space-sm py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-body-sm text-body-sm flex items-center gap-1.5 transition-colors" title="Compare visual diff across draft checkpoints">
+<span class="material-symbols-outlined text-[16px]">difference</span>
+<span class="hidden md:inline">Diff</span>
+</button>
+<button class="px-space-md py-1.5 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-body-sm text-body-sm font-semibold flex items-center gap-1.5 shadow-sm transition-all" id="btn-submit-review">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>Submit for Supervisor Review</span>
+</button>
+</div>
+</div>
+<!-- Secondary Telemetry Ribbon -->
+<div class="mt-space-sm pt-space-xs flex flex-wrap items-center justify-between text-secondary font-label-data-sm text-label-data-sm bg-surface-container-low px-space-md py-1.5 rounded">
+<div class="flex items-center gap-space-md">
+<span class="flex items-center gap-1 text-on-surface">
+<span class="w-2 h-2 rounded-full bg-tertiary inline-block animate-pulse"></span>
+          Autosave buffer: Synced 14:32:04 UTC (Hash: <span class="font-label-code">sha256-8a7f9c</span>)
+        </span>
+<span class="hidden lg:inline text-secondary">•</span>
+<span class="hidden lg:inline">PI: Dr. Elena Rostova</span>
+<span class="hidden xl:inline text-secondary">•</span>
+<span class="hidden xl:inline">Co-Author: Dr. Sarah Lin</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="text-tertiary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">shield</span>
+          21 CFR Part 11 Enforced
+        </span>
+</div>
+</div>
+</header>
+<!-- 3-Column Studio Canvas -->
+<div class="flex flex-col lg:flex-row w-full flex-1">
+<!-- Column 1: Left Document Navigation / TOC (20%) -->
+<aside class="w-full lg:w-[22%] xl:w-[20%] bg-surface-container-low p-space-md shrink-0 lg:min-h-[calc(100vh-140px)]">
+<div class="sticky top-20 space-y-space-md">
+<div class="flex items-center justify-between px-space-xs">
+<span class="font-label-status text-label-status text-secondary tracking-widest uppercase">TABLE OF CONTENTS</span>
+<span class="font-label-data-sm text-label-data-sm text-tertiary font-semibold">6 / 8 Valid</span>
+</div>
+<nav class="space-y-1 font-body-sm text-body-sm">
+<!-- Item 1 -->
+<a class="flex items-center justify-between p-2 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors group" href="#sec-hypothesis">
+<span class="flex items-center gap-2 truncate">
+<span class="font-label-data-sm text-secondary">01</span>
+<span class="truncate">Hypotheses &amp; Objective</span>
+</span>
+<span class="material-symbols-outlined text-tertiary text-[16px] shrink-0">check_circle</span>
+</a>
+<!-- Item 2 -->
+<a class="flex items-center justify-between p-2 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors group" href="#sec-materials">
+<span class="flex items-center gap-2 truncate">
+<span class="font-label-data-sm text-secondary">02</span>
+<span class="truncate">Materials &amp; Reagent Lots</span>
+</span>
+<span class="material-symbols-outlined text-tertiary text-[16px] shrink-0">check_circle</span>
+</a>
+<!-- Item 3 -->
+<a class="flex items-center justify-between p-2 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors group" href="#sec-parameters">
+<span class="flex items-center gap-2 truncate">
+<span class="font-label-data-sm text-secondary">03</span>
+<span class="truncate">Experimental Parameters</span>
+</span>
+<span class="material-symbols-outlined text-tertiary text-[16px] shrink-0">check_circle</span>
+</a>
+<!-- Item 4 (Current) -->
+<a class="flex items-center justify-between p-2 rounded-lg bg-primary-container text-on-primary-container font-medium shadow-sm transition-colors" href="#sec-observations">
+<span class="flex items-center gap-2 truncate">
+<span class="font-label-data-sm text-on-primary-container">04</span>
+<span class="truncate">Step-by-Step Observations</span>
+</span>
+<span class="material-symbols-outlined text-[16px] shrink-0">edit</span>
+</a>
+<!-- Item 5 -->
+<a class="flex items-center justify-between p-2 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container-high transition-colors group" href="#sec-data-grid">
+<span class="flex items-center gap-2 truncate">
+<span class="font-label-data-sm text-secondary">05</span>
+<span class="truncate">Tabular Measurement Grid</span>
+</span>
+<span class="font-label-status text-label-status px-1.5 py-0.2 rounded bg-surface-variant text-on-surface-variant">Live</span>
+</a>
+<!-- Item 6 -->
+<a class="flex items-center justify-between p-2 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors group" href="#sec-electrophoresis">
+<span class="flex items-center gap-2 truncate">
+<span class="font-label-data-sm text-secondary">06</span>
+<span class="truncate">Analytical Gel Images</span>
+</span>
+<span class="font-label-status text-label-status px-1.5 py-0.2 rounded bg-surface-container-high text-secondary">1 Img</span>
+</a>
+<!-- Item 7 -->
+<a class="flex items-center justify-between p-2 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors group" href="#sec-deviations">
+<span class="flex items-center gap-2 truncate">
+<span class="font-label-data-sm text-secondary">07</span>
+<span class="truncate">Deviations &amp; Exceptions</span>
+</span>
+<span class="font-label-data-sm text-label-data-sm text-secondary">0 Logged</span>
+</a>
+<!-- Item 8 -->
+<a class="flex items-center justify-between p-2 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors group" href="#sec-conclusions">
+<span class="flex items-center gap-2 truncate">
+<span class="font-label-data-sm text-secondary">08</span>
+<span class="truncate">Conclusions &amp; Sign-off</span>
+</span>
+<span class="material-symbols-outlined text-outline text-[16px] shrink-0">pending</span>
+</a>
+</nav>
+<!-- Quick Spec Card -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm space-y-space-xs">
+<div class="flex items-center gap-2 text-primary font-body-sm text-body-sm font-semibold">
+<span class="material-symbols-outlined text-[18px]">biotech</span>
+<span>Target Substrate</span>
+</div>
+<div class="font-label-code text-label-code text-on-surface bg-surface-container-low p-2 rounded truncate select-all">
+            EMX1-Locus-chr2:73160914
+          </div>
+<p class="font-label-data-sm text-label-data-sm text-secondary">
+            Expected cleavage fragment sizes: <strong>412 bp</strong> &amp; <strong>284 bp</strong>. Cleavage threshold &gt;85% at 45 min.
+          </p>
+</div>
+<!-- Protocol Chain Signature Badge -->
+<div class="bg-surface-container p-space-sm rounded-lg text-secondary font-label-data-sm text-label-data-sm space-y-1">
+<div class="flex items-center gap-1.5 font-semibold text-on-surface">
+<span class="material-symbols-outlined text-tertiary text-[14px]">verified</span>
+<span>Governing SOP Hash</span>
+</div>
+<div class="font-label-code text-[10px] break-all text-on-surface-variant">
+            e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+          </div>
+</div>
+</div>
+</aside>
+<!-- Column 2: Main Notebook Center Editor (55%) -->
+<main class="w-full lg:w-[53%] xl:w-[55%] p-space-lg space-y-space-xl">
+<!-- Section 1: Abstract & Statement -->
+<section class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm space-y-space-md relative overflow-hidden" id="sec-hypothesis">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-label-status text-label-status text-primary tracking-widest uppercase">SECTION 01 // OBJECTIVE</span>
+<span class="font-label-status text-label-status text-tertiary bg-surface-container px-2 py-0.5 rounded flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">done_all</span> Complete
+          </span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Cleavage Kinetics Determination across Targeted Genomic Coordinates</h2>
+<div class="font-body-md text-body-md text-on-surface-variant space-y-2 leading-relaxed">
+<p>
+            Quantify the precise initial catalytic velocity (<em>v₀</em>) and asymptotic completion efficiency of human wild-type recombinant <strong>SpCas9</strong> against synthetic double-stranded cDNA fragments containing the standard oncology-relevant locus target.
+          </p>
+<div class="p-space-sm rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">info</span>
+<span>Null Hypothesis: No significant deviation in rate constant (<em>k_cat</em>) when comparing single-pot sgRNA pre-complexation versus stepwise automated titration.</span>
+</div>
+</div>
+</section>
+<!-- Section 3: Materials & Lot Traceability -->
+<section class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm space-y-space-md" id="sec-materials">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-status text-label-status text-primary tracking-widest uppercase">SECTION 02 &amp; 03 // PROVENANCE</span>
+<span class="font-headline-md text-headline-md text-on-surface">Materials, Reagents &amp; Lot Control</span>
+</div>
+<button class="font-label-data-sm text-label-data-sm text-primary hover:underline flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">add</span> Add Reagent Lot
+          </button>
+</div>
+<!-- Dense Table for Lots -->
+<div class="overflow-x-auto rounded-lg bg-surface-container-low">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead class="bg-surface-container text-secondary font-label-status text-label-status uppercase">
+<tr>
+<th class="py-2 px-3">Reagent</th>
+<th class="py-2 px-3">Supplier</th>
+<th class="py-2 px-3">Lot Number</th>
+<th class="py-2 px-3">Expiry</th>
+<th class="py-2 px-3">Initial Vol</th>
+<th class="py-2 px-3 text-right">Status</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container font-label-data-sm text-label-data-sm">
+<tr class="hover:bg-surface-container/60 transition-colors">
+<td class="py-2.5 px-3 font-semibold text-on-surface">Cas9 Nuclease (rec. WT)</td>
+<td class="py-2.5 px-3 text-on-surface-variant">New England Biolabs</td>
+<td class="py-2.5 px-3 font-label-code text-primary">LOT-88219-B</td>
+<td class="py-2.5 px-3 text-secondary">2027-11-30</td>
+<td class="py-2.5 px-3">50.0 µL (20 µM)</td>
+<td class="py-2.5 px-3 text-right"><span class="px-2 py-0.5 rounded bg-surface-container-high text-tertiary font-bold">QA PASS</span></td>
+</tr>
+<tr class="hover:bg-surface-container/60 transition-colors">
+<td class="py-2.5 px-3 font-semibold text-on-surface">sgRNA-TargetA (HPLC Pure)</td>
+<td class="py-2.5 px-3 text-on-surface-variant">Integrated DNA Tech</td>
+<td class="py-2.5 px-3 font-label-code text-primary">LOT-9910-A</td>
+<td class="py-2.5 px-3 text-secondary">2026-12-15</td>
+<td class="py-2.5 px-3">120.0 µL (100 µM)</td>
+<td class="py-2.5 px-3 text-right"><span class="px-2 py-0.5 rounded bg-surface-container-high text-tertiary font-bold">QA PASS</span></td>
+</tr>
+<tr class="hover:bg-surface-container/60 transition-colors">
+<td class="py-2.5 px-3 font-semibold text-on-surface">10X Cleavage Reaction Buffer</td>
+<td class="py-2.5 px-3 text-on-surface-variant">In-House Chem Core</td>
+<td class="py-2.5 px-3 font-label-code text-primary">LOT-0104-BUF</td>
+<td class="py-2.5 px-3 text-secondary">2027-04-01</td>
+<td class="py-2.5 px-3">10.0 mL</td>
+<td class="py-2.5 px-3 text-right"><span class="px-2 py-0.5 rounded bg-surface-container-high text-tertiary font-bold">QA PASS</span></td>
+</tr>
+<tr class="hover:bg-surface-container/60 transition-colors">
+<td class="py-2.5 px-3 font-semibold text-on-surface">6X Stop Solution (EDTA 250mM)</td>
+<td class="py-2.5 px-3 text-on-surface-variant">Thermo Fisher</td>
+<td class="py-2.5 px-3 font-label-code text-primary">LOT-5519-STP</td>
+<td class="py-2.5 px-3 text-secondary">2028-01-20</td>
+<td class="py-2.5 px-3">5.0 mL</td>
+<td class="py-2.5 px-3 text-right"><span class="px-2 py-0.5 rounded bg-surface-container-high text-tertiary font-bold">QA PASS</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- Section 4: Step-by-Step Observations & Scientific Formula -->
+<section class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm space-y-space-md" id="sec-observations">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-status text-label-status text-primary tracking-widest uppercase">SECTION 04 // PROTOCOL RUN</span>
+<span class="font-headline-md text-headline-md text-on-surface">Step-by-Step Observations</span>
+</div>
+<span class="font-label-status text-label-status bg-primary/10 text-primary px-2.5 py-1 rounded-full font-semibold">
+            BENCH TIMER: 01h 12m ELAPSED
+          </span>
+</div>
+<!-- Scientific Mathematical Annotation Block -->
+<div class="p-space-md rounded-xl bg-surface-container-low space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-status text-label-status text-secondary uppercase tracking-wider">Kinetic Mathematical Model</span>
+<span class="font-label-data-sm text-label-data-sm text-primary font-semibold">Michaelis-Menten Fit</span>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm text-center">
+<div class="font-label-code text-lg text-primary tracking-wide font-semibold">
+              v₀ = (V_max · [S]) / (K_m + [S])
+            </div>
+<div class="font-label-data-sm text-label-data-sm text-secondary mt-1">
+              Where [S] = target DNA duplex (nM), V_max = 1.42 ± 0.04 nM·s⁻¹, K_m = 18.3 nM
+            </div>
+</div>
+</div>
+<!-- Markdown/Rich Note Observation Entry -->
+<div class="space-y-space-xs">
+<label class="font-label-status text-label-status text-secondary uppercase tracking-wider flex items-center justify-between">
+<span>Primary Researcher Observation Record</span>
+<span class="font-label-data-sm text-label-data-sm text-secondary">Markdown Supported</span>
+</label>
+<div class="rounded-lg bg-surface-container-low p-space-md space-y-space-sm font-body-md text-body-md text-on-surface">
+<p class="leading-relaxed">
+              Reaction initiated strictly at <strong class="text-primary font-semibold">37.0 °C</strong> using calibrated Eppendorf ThermoMixer C (Equip-ID: <span class="font-label-code text-secondary">#EQ-7721</span>). Cleavage kinetics monitored at predetermined intervals of <strong>5, 10, 15, 30, and 60 minutes</strong>.
+            </p>
+<p class="leading-relaxed">
+              At each timepoint, a 5.0 µL aliquot was withdrawn with positive displacement micropipette and immediately quenched with 1.0 µL of <strong>6X Stop Solution (EDTA 250mM)</strong>, followed by rapid heat-inactivation at <strong>65 °C for 10 min</strong>. No precipitation or visible aggregation observed upon stopping.
+            </p>
+<div class="bg-surface-container-lowest p-3 rounded-lg flex items-center gap-2 text-secondary font-label-data-sm text-label-data-sm shadow-sm">
+<span class="material-symbols-outlined text-primary text-[18px]">fingerprint</span>
+<span>Signed at bench: <strong class="text-on-surface">Dr. Elena Rostova</strong> (14:15:32 UTC) · Location: Molecular Bench 4</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 5: Tabular Measurement Data & Kinetic Curve Visualization -->
+<section class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm space-y-space-md" id="sec-data-grid">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-space-xs">
+<div>
+<span class="font-label-status text-label-status text-primary tracking-widest uppercase">SECTION 05 // RAW TELEMETRY</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Live Tabular Measurement Grid</h3>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-sm py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-data-sm text-label-data-sm flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[14px]">file_download</span> CSV
+            </button>
+<button class="px-space-sm py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-data-sm text-label-data-sm flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[14px]">reorder</span> Column Specs
+            </button>
+</div>
+</div>
+<!-- Table Data -->
+<div class="overflow-x-auto rounded-lg bg-surface-container-low">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead class="bg-surface-container text-secondary font-label-status text-label-status uppercase">
+<tr>
+<th class="py-2.5 px-3">Timepoint</th>
+<th class="py-2.5 px-3">Sample A (OD260)</th>
+<th class="py-2.5 px-3">Sample B (OD260)</th>
+<th class="py-2.5 px-3">Cleavage Yield (%)</th>
+<th class="py-2.5 px-3 text-right">Rel. Error (±)</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container font-label-code text-label-code">
+<tr class="hover:bg-surface-container/60 transition-colors">
+<td class="py-2 px-3 font-semibold text-on-surface">00 min</td>
+<td class="py-2 px-3 text-secondary">0.042</td>
+<td class="py-2 px-3 text-secondary">0.041</td>
+<td class="py-2 px-3 font-semibold text-on-surface">0.0%</td>
+<td class="py-2 px-3 text-right text-secondary">±0.05%</td>
+</tr>
+<tr class="hover:bg-surface-container/60 transition-colors">
+<td class="py-2 px-3 font-semibold text-on-surface">05 min</td>
+<td class="py-2 px-3 text-secondary">0.185</td>
+<td class="py-2 px-3 text-secondary">0.189</td>
+<td class="py-2 px-3 font-semibold text-primary">24.2%</td>
+<td class="py-2 px-3 text-right text-secondary">±0.12%</td>
+</tr>
+<tr class="hover:bg-surface-container/60 transition-colors">
+<td class="py-2 px-3 font-semibold text-on-surface">10 min</td>
+<td class="py-2 px-3 text-secondary">0.342</td>
+<td class="py-2 px-3 text-secondary">0.338</td>
+<td class="py-2 px-3 font-semibold text-primary">48.6%</td>
+<td class="py-2 px-3 text-right text-secondary">±0.08%</td>
+</tr>
+<tr class="hover:bg-surface-container/60 transition-colors">
+<td class="py-2 px-3 font-semibold text-on-surface">15 min</td>
+<td class="py-2 px-3 text-secondary">0.510</td>
+<td class="py-2 px-3 text-secondary">0.515</td>
+<td class="py-2 px-3 font-semibold text-primary">69.4%</td>
+<td class="py-2 px-3 text-right text-secondary">±0.15%</td>
+</tr>
+<tr class="hover:bg-surface-container/60 transition-colors">
+<td class="py-2 px-3 font-semibold text-on-surface">30 min</td>
+<td class="py-2 px-3 text-secondary">0.680</td>
+<td class="py-2 px-3 text-secondary">0.675</td>
+<td class="py-2 px-3 font-semibold text-tertiary">88.2%</td>
+<td class="py-2 px-3 text-right text-secondary">±0.20%</td>
+</tr>
+<tr class="hover:bg-surface-container/60 transition-colors">
+<td class="py-2 px-3 font-semibold text-on-surface">60 min</td>
+<td class="py-2 px-3 text-secondary">0.725</td>
+<td class="py-2 px-3 text-secondary">0.730</td>
+<td class="py-2 px-3 font-semibold text-tertiary">95.1%</td>
+<td class="py-2 px-3 text-right text-secondary">±0.18%</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Inline Kinetic Curve Chart Preview -->
+<div class="p-space-md rounded-xl bg-surface-container-low space-y-space-sm">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">Michaelis-Menten Kinetic Progression</span>
+<p class="font-label-data-sm text-label-data-sm text-secondary">Cleavage conversion rate vs incubation exposure (shaded ± 95% CI)</p>
+</div>
+<div class="flex items-center gap-space-xs font-label-data-sm text-label-data-sm">
+<span class="w-3 h-0.5 bg-primary inline-block"></span>
+<span class="text-on-surface font-medium">Experimental Data</span>
+<span class="w-3 h-0.5 bg-tertiary inline-block ml-2"></span>
+<span class="text-on-surface font-medium">Predicted Asymptote</span>
+</div>
+</div>
+<!-- Dynamic Vector Graphic Chart -->
+<div class="w-full h-48 bg-surface-container-lowest rounded-lg p-2 flex items-center justify-center">
+<svg class="w-full h-full text-primary" fill="none" viewbox="0 0 540 160">
+<!-- Grid lines -->
+<line stroke="currentColor" stroke-dasharray="4" stroke-opacity="0.08" x1="40" x2="520" y1="20" y2="20"></line>
+<line stroke="currentColor" stroke-dasharray="4" stroke-opacity="0.08" x1="40" x2="520" y1="60" y2="60"></line>
+<line stroke="currentColor" stroke-dasharray="4" stroke-opacity="0.08" x1="40" x2="520" y1="100" y2="100"></line>
+<line stroke="currentColor" stroke-opacity="0.2" x1="40" x2="520" y1="140" y2="140"></line>
+<!-- Y-Axis Labels -->
+<text class="fill-secondary font-label-status text-[9px]" text-anchor="end" x="32" y="24">100%</text>
+<text class="fill-secondary font-label-status text-[9px]" text-anchor="end" x="32" y="64">75%</text>
+<text class="fill-secondary font-label-status text-[9px]" text-anchor="end" x="32" y="104">50%</text>
+<text class="fill-secondary font-label-status text-[9px]" text-anchor="end" x="32" y="143">0%</text>
+<!-- X-Axis Labels -->
+<text class="fill-secondary font-label-status text-[9px]" text-anchor="middle" x="50" y="154">0m</text>
+<text class="fill-secondary font-label-status text-[9px]" text-anchor="middle" x="130" y="154">5m</text>
+<text class="fill-secondary font-label-status text-[9px]" text-anchor="middle" x="210" y="154">10m</text>
+<text class="fill-secondary font-label-status text-[9px]" text-anchor="middle" x="290" y="154">15m</text>
+<text class="fill-secondary font-label-status text-[9px]" text-anchor="middle" x="410" y="154">30m</text>
+<text class="fill-secondary font-label-status text-[9px]" text-anchor="middle" x="500" y="154">60m</text>
+<!-- Confidence Band -->
+<path d="M 50 140 Q 150 78, 290 52 T 500 24 L 500 32 Q 290 58, 150 84 T 50 140 Z" fill="currentColor" fill-opacity="0.12"></path>
+<!-- Theoretical Fit Curve -->
+<path d="M 50 140 Q 160 80, 290 54 T 500 26" stroke="#007d57" stroke-dasharray="3 3" stroke-width="2"></path>
+<!-- Real Curve -->
+<path d="M 50 140 L 130 106 L 210 72 L 290 44 L 410 28 L 500 25" stroke="currentColor" stroke-linecap="round" stroke-width="2.5"></path>
+<!-- Data Points with Rings -->
+<circle cx="50" cy="140" fill="currentColor" r="3.5"></circle>
+<circle cx="130" cy="106" fill="currentColor" r="3.5"></circle>
+<circle cx="210" cy="72" fill="currentColor" r="3.5"></circle>
+<circle cx="290" cy="44" fill="currentColor" r="3.5"></circle>
+<circle cx="410" cy="28" fill="currentColor" r="3.5"></circle>
+<circle cx="500" cy="25" fill="#007d57" r="4.5"></circle>
+</svg>
+</div>
+</div>
+</section>
+<!-- Section 6: Electrophoresis Gel Evidence Asset -->
+<section class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm space-y-space-md" id="sec-electrophoresis">
+<div class="flex items-center justify-between pb-space-xs">
+<div>
+<span class="font-label-status text-label-status text-primary tracking-widest uppercase">SECTION 06 // VISUAL EVIDENCE</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Analytical Gel Electrophoresis Verification</h3>
+</div>
+<span class="font-label-data-sm text-label-data-sm px-2 py-0.5 rounded bg-surface-container text-secondary">
+            1 Raw File Linked
+          </span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Gel Asset Tile -->
+<div class="rounded-xl overflow-hidden bg-surface-container-low shadow-sm flex flex-col justify-between">
+<div class="relative w-full h-44 bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Scientific 2 percent agarose gel electrophoresis visualization displaying DNA cleavage ladder bands glowing under ultraviolet transillumination in a dark biomedical laboratory environment with precise fluorescent neon blue bands representing distinct nucleotide fragment sizes." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyo79E4iI0PTVwTA7VvpeysvvLVSgcmPzQbWJI3FWvnqS5bxCZIMgxE-hnk1djNGqkUNlp6tQUZEh-j9IIJ4Ah84CgXbQJ1Eoaqe4zi6LsnsoshGtDkVvDi5veXeVFNy0lTLjOvsbz6YYrkkTzbuw1DT8C4Ju4QOfexBCMpPpCRRQiHAZA_Wh0HxNQ55VBrV1kJP3i5NjlVmpmJ2uFWguYpuIxUUk1Aqq41-N7tYah1f-U_fc3R9_I"/>
+<div class="absolute top-2 left-2 bg-on-surface/80 text-inverse-on-surface font-label-data-sm text-label-data-sm px-2 py-0.5 rounded backdrop-blur">
+                Lane 3: t = 60 min (Digested)
+              </div>
+</div>
+<div class="p-space-sm space-y-1">
+<div class="flex items-center justify-between font-label-data-sm text-label-data-sm">
+<span class="font-semibold text-on-surface font-label-code">Gel_run_04_lane3.png</span>
+<span class="text-secondary">4.2 MB · 16-bit TIFF</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary">
+                Resolved on 2.0% Agarose at 90V for 55 mins in 1X TAE buffer. Band migration corresponds precisely with expected 412bp &amp; 284bp cleavage products.
+              </p>
+</div>
+</div>
+<!-- Densitometry Analysis Summary -->
+<div class="rounded-xl bg-surface-container-low p-space-md space-y-space-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between">
+<span class="font-label-status text-label-status text-secondary uppercase tracking-wider">Automated Densitometry</span>
+<span class="material-symbols-outlined text-tertiary text-[18px]">auto_graph</span>
+</div>
+<div class="mt-2 space-y-space-xs font-label-data-sm text-label-data-sm">
+<div class="flex justify-between py-1 bg-surface-container-lowest px-2 rounded">
+<span class="text-secondary">Uncut Substrate (696 bp)</span>
+<span class="font-semibold text-on-surface">4.9% intensity</span>
+</div>
+<div class="flex justify-between py-1 bg-surface-container-lowest px-2 rounded">
+<span class="text-secondary">Cleaved Band 1 (412 bp)</span>
+<span class="font-semibold text-on-surface">57.3% intensity</span>
+</div>
+<div class="flex justify-between py-1 bg-surface-container-lowest px-2 rounded">
+<span class="text-secondary">Cleaved Band 2 (284 bp)</span>
+<span class="font-semibold text-on-surface">37.8% intensity</span>
+</div>
+</div>
+</div>
+<div class="pt-space-xs">
+<div class="font-body-sm text-body-sm text-on-surface font-medium flex items-center gap-1.5">
+<span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span>
+<span>Calculated Total Digestion: 95.1%</span>
+</div>
+<span class="font-label-data-sm text-label-data-sm text-secondary">Exceeds minimum experimental criteria (90.0%)</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 7 & 8: Deviation Registry & Signoff placeholder -->
+<section class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm space-y-space-md" id="sec-deviations">
+<div class="flex items-center justify-between pb-space-xs">
+<div>
+<span class="font-label-status text-label-status text-primary tracking-widest uppercase">SECTION 07 // AUDIT LOG</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Deviations &amp; Procedural Exceptions</h3>
+</div>
+<button class="px-space-sm py-1 rounded bg-error-container text-on-error-container hover:opacity-90 font-label-data-sm text-label-data-sm flex items-center gap-1 transition-opacity">
+<span class="material-symbols-outlined text-[14px]">warning</span> Log Exception
+          </button>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container-low text-center space-y-1">
+<span class="material-symbols-outlined text-tertiary text-[24px]">verified</span>
+<p class="font-body-sm text-body-sm font-semibold text-on-surface">Zero Protocol Deviations Logged</p>
+<p class="font-label-data-sm text-label-data-sm text-secondary">
+            All reagents, incubations, and sensor calibration standards conformed with standard parameters in SOP-GEN-v3.2.
+          </p>
+</div>
+</section>
+</main>
+<!-- Column 3: Right Evidence, Audit Trail & Provenance Sidebar (25%) -->
+<aside class="w-full lg:w-[25%] xl:w-[25%] bg-surface-container-low p-space-md shrink-0 lg:min-h-[calc(100vh-140px)] space-y-space-md">
+<!-- Sticky Provenance Container -->
+<div class="sticky top-20 space-y-space-md">
+<!-- Tab Selector: Record Facts vs Audit History -->
+<div class="flex items-center p-1 bg-surface-container rounded-lg font-body-sm text-body-sm">
+<button class="flex-1 py-1 px-2 rounded-md font-semibold text-center bg-surface-container-lowest text-on-surface shadow-sm transition-all" id="tab-facts-btn">
+            Record Facts
+          </button>
+<button class="flex-1 py-1 px-2 rounded-md text-secondary hover:text-on-surface text-center transition-all" id="tab-audit-btn">
+            Audit Trail
+          </button>
+</div>
+<!-- TAB 1 CONTENT: Record Facts & Signatures -->
+<div class="space-y-space-md" id="tab-facts-content">
+<!-- Key Researchers Card -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm space-y-space-sm">
+<span class="font-label-status text-label-status text-secondary tracking-widest uppercase">INVESTIGATOR ROSTER</span>
+<div class="space-y-space-sm">
+<!-- PI -->
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary font-bold text-xs">
+                    ER
+                  </div>
+<div>
+<div class="font-body-sm text-body-sm font-semibold text-on-surface">Dr. Elena Rostova</div>
+<div class="font-label-data-sm text-label-data-sm text-secondary">Principal Investigator</div>
+</div>
+</div>
+<span class="font-label-status text-label-status text-tertiary bg-surface-container px-1.5 py-0.5 rounded">Sign Ready</span>
+</div>
+<!-- Co-Author -->
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container font-bold text-xs">
+                    SL
+                  </div>
+<div>
+<div class="font-body-sm text-body-sm font-semibold text-on-surface">Dr. Sarah Lin</div>
+<div class="font-label-data-sm text-label-data-sm text-secondary">Bioinformatics Analyst</div>
+</div>
+</div>
+<span class="font-label-status text-label-status text-secondary bg-surface-container px-1.5 py-0.5 rounded">Contributor</span>
+</div>
+<!-- Reviewer / Supervisor -->
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-secondary font-bold text-xs">
+                    MT
+                  </div>
+<div>
+<div class="font-body-sm text-body-sm font-semibold text-on-surface">Dr. Marcus Thorne</div>
+<div class="font-label-data-sm text-label-data-sm text-secondary">Designated Supervisor</div>
+</div>
+</div>
+<span class="font-label-status text-label-status text-outline bg-surface-container px-1.5 py-0.5 rounded">Assigned</span>
+</div>
+</div>
+</div>
+<!-- Regulatory & Compliance Seal -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm space-y-space-xs">
+<div class="flex items-center gap-2 text-tertiary">
+<span class="material-symbols-outlined text-[18px]">gavel</span>
+<span class="font-label-status text-label-status tracking-wider uppercase font-semibold">21 CFR PART 11 COMPLIANT</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-tight">
+              Electronic signatures recorded within this document are legally defensible under Title 21 of the Code of Federal Regulations.
+            </p>
+<div class="pt-2 font-label-code text-[10px] text-secondary divide-y divide-surface-container">
+<div class="py-1 flex justify-between">
+<span>Cryptographic Digest:</span>
+<span class="text-on-surface">SHA-256 Valid</span>
+</div>
+<div class="py-1 flex justify-between">
+<span>Timestamp Authority:</span>
+<span class="text-on-surface">NIST Server Sync</span>
+</div>
+<div class="py-1 flex justify-between">
+<span>Storage Class:</span>
+<span class="text-on-surface">WORM Compliant</span>
+</div>
+</div>
+</div>
+<!-- Deviation Button (Warning Style) -->
+<button class="w-full py-2.5 px-space-md rounded-lg bg-error text-on-error hover:bg-error/90 font-body-sm text-body-sm font-semibold flex items-center justify-center gap-2 shadow-sm transition-colors">
+<span class="material-symbols-outlined text-[18px]">report_problem</span>
+<span>Log Formal Deviation</span>
+</button>
+</div>
+<!-- TAB 2 CONTENT: Version History & Audit Trail (Hidden by default, toggleable) -->
+<div class="hidden space-y-space-md" id="tab-audit-content">
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm space-y-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-status text-label-status text-secondary tracking-widest uppercase">AUDIT TRAIL LOG</span>
+<span class="font-label-data-sm text-label-data-sm text-primary font-medium">Auto-recorded</span>
+</div>
+<!-- Vertical Timeline -->
+<div class="relative pl-6 space-y-space-md before:absolute before:left-2 before:top-2 before:bottom-2 before:w-0.5 before:bg-surface-container-high">
+<!-- Timeline Item 1 -->
+<div class="relative">
+<span class="absolute -left-6 top-1 w-2.5 h-2.5 rounded-full bg-primary"></span>
+<div class="font-label-status text-label-status text-secondary">14:32 TODAY</div>
+<div class="font-body-sm text-body-sm font-semibold text-on-surface">Auto-saved Tabular Data</div>
+<div class="font-label-data-sm text-label-data-sm text-secondary">Dr. Elena Rostova (6 timepoints synced)</div>
+</div>
+<!-- Timeline Item 2 -->
+<div class="relative">
+<span class="absolute -left-6 top-1 w-2.5 h-2.5 rounded-full bg-surface-variant"></span>
+<div class="font-label-status text-label-status text-secondary">11:15 TODAY</div>
+<div class="font-body-sm text-body-sm font-semibold text-on-surface">Attached Gel Image</div>
+<div class="font-label-data-sm text-label-data-sm text-secondary">Gel_run_04_lane3.png added</div>
+</div>
+<!-- Timeline Item 3 -->
+<div class="relative">
+<span class="absolute -left-6 top-1 w-2.5 h-2.5 rounded-full bg-surface-variant"></span>
+<div class="font-label-status text-label-status text-secondary">09:40 TODAY</div>
+<div class="font-body-sm text-body-sm font-semibold text-on-surface">Modified Parameter</div>
+<div class="font-label-data-sm text-label-data-sm text-secondary">Incubation temperature set to 37.0 °C</div>
+</div>
+<!-- Timeline Item 4 -->
+<div class="relative">
+<span class="absolute -left-6 top-1 w-2.5 h-2.5 rounded-full bg-tertiary"></span>
+<div class="font-label-status text-label-status text-secondary">YESTERDAY 17:30</div>
+<div class="font-body-sm text-body-sm font-semibold text-on-surface">Experiment Instantiated</div>
+<div class="font-label-data-sm text-label-data-sm text-secondary">Cloned from SOP-GEN-v3.2 Template</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick Keyboard Shortcuts Reference -->
+<div class="p-space-sm bg-surface-container rounded-lg text-secondary font-label-data-sm text-label-data-sm space-y-1">
+<div class="flex items-center justify-between">
+<span>Commit Section</span>
+<kbd class="px-1.5 py-0.5 rounded bg-surface-container-lowest text-on-surface font-label-code text-[10px] shadow-sm">⌘↵</kbd>
+</div>
+<div class="flex items-center justify-between">
+<span>Add Row to Grid</span>
+<kbd class="px-1.5 py-0.5 rounded bg-surface-container-lowest text-on-surface font-label-code text-[10px] shadow-sm">⇧+Enter</kbd>
+</div>
+<div class="flex items-center justify-between">
+<span>Snapshot Revision</span>
+<kbd class="px-1.5 py-0.5 rounded bg-surface-container-lowest text-on-surface font-label-code text-[10px] shadow-sm">⌘S</kbd>
+</div>
+</div>
+</div>
+</aside>
+</div>
+</div>
+<script>
+  // Simple tab switcher for Right Sidebar (Record Facts vs Audit Trail)
+  const factsBtn = document.getElementById('tab-facts-btn');
+  const auditBtn = document.getElementById('tab-audit-btn');
+  const factsContent = document.getElementById('tab-facts-content');
+  const auditContent = document.getElementById('tab-audit-content');
+
+  factsBtn.addEventListener('click', () => {
+    factsBtn.className = 'flex-1 py-1 px-2 rounded-md font-semibold text-center bg-surface-container-lowest text-on-surface shadow-sm transition-all';
+    auditBtn.className = 'flex-1 py-1 px-2 rounded-md text-secondary hover:text-on-surface text-center transition-all';
+    factsContent.classList.remove('hidden');
+    auditContent.classList.add('hidden');
+  });
+
+  auditBtn.addEventListener('click', () => {
+    auditBtn.className = 'flex-1 py-1 px-2 rounded-md font-semibold text-center bg-surface-container-lowest text-on-surface shadow-sm transition-all';
+    factsBtn.className = 'flex-1 py-1 px-2 rounded-md text-secondary hover:text-on-surface text-center transition-all';
+    auditContent.classList.remove('hidden');
+    factsContent.classList.add('hidden');
+  });
+
+  // Micro-interaction: Submit review toast notification
+  const reviewBtn = document.getElementById('btn-submit-review');
+  if (reviewBtn) {
+    reviewBtn.addEventListener('click', () => {
+      const originalText = reviewBtn.innerHTML;
+      reviewBtn.innerHTML = '<span class="material-symbols-outlined text-[16px] animate-spin">refresh</span><span>Validating Signatures...</span>';
+      setTimeout(() => {
+        reviewBtn.innerHTML = '<span class="material-symbols-outlined text-[16px]">task_alt</span><span>Transmitted to Dr. Thorne</span>';
+        reviewBtn.classList.remove('bg-primary');
+        reviewBtn.classList.add('bg-tertiary');
+      }, 900);
+    });
+  }
+</script></main></div></body></html>
